@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PreFill</name>
+    </assembly>
+    <members>
+        <member name="T:PreFill.PreFill">
+            <summary>
+            Prefill, fills preceeding of value with desired character or string. E.g: PreFill(5) => 05 or 00000005 or "     5"
+            </summary>
+        </member>
+        <member name="M:PreFill.PreFill.GetNumberOfDigit(System.Int64)">
+            <summary>
+            Returns number of digits of given value (Signed byte, short, int, long)
+            </summary>
+            <param name="number">long number</param>
+            <returns>Minimum 1, maximum 20 on negative integer numbers, maximum 19 on positive integer numbers.</returns>
+        </member>
+        <member name="M:PreFill.PreFill.GetNumberOfDigit(System.UInt64)">
+            <summary>
+            Returns number of digits of given value (Unsigned sbyte, ushort, uint, ulong)
+            </summary>
+            <param name="number">An unsigned long number</param>
+            <returns>Minimum 0, maximum 19 on positive integer numbers.</returns>
+        </member>
+        <member name="M:PreFill.PreFill.FillChar(System.Int32,System.Char)">
+            <summary>
+            Returns prefilling value (dynamically)
+            </summary>
+            <param name="count">Number of filling</param>
+            <param name="text">Selected character to fill before number</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:PreFill.PreFill.FillString(System.Int32,System.String)">
+            <summary>
+            Returns prefilling value (dynamically)
+            </summary>
+            <param name="count">Number of filling</param>
+            <param name="text">Selected character to fill before number</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.Int64,System.Byte,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxNumberOfDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.Int64,System.Byte,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxNumberOfDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Int64},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="numberList"></param>
+            <param name="text"></param>
+            <returns>Concentration of prefill string and number itself.</returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Int64},System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="numberList"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.UInt64,System.Byte,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.UInt64,System.Byte,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.UInt64},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="numberList"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.UInt64},System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="numberList"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFillCustom(System.Int64,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxNumberOfDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFillCustom(System.Int64,System.Int32,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxNumberOfDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill1(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill2(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill3(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill4(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill5(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill6(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill7(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill8(System.Int64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFillCustom(System.UInt64,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFillCustom(System.UInt64,System.Int32,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="maxDigit"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill1(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill2(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill3(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill4(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill5(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill6(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill7(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PreFill.PreFill.PreFill8(System.UInt64,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="number"></param>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
