@@ -8,4 +8,5 @@
 #### Example output:
 
 PrefilledCustom(5, 4, '0') = '0005'
+
 PrefilledCustom(55, 3, ' ') = ' 55'
