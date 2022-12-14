@@ -1,11 +1,22 @@
-# Prefill
+# PreFill
+
+PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.
 
 ## Description
 
+Prefill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right.
+
 ## Listed Methods
+
 ```
 * PreFilledCustom()
+```
+
+```
 * PreFillCustom()
+```
+
+```
 * PreFill[1-8]()
 ```
 
@@ -19,6 +30,9 @@
 
 ## Licence
 No licence is required.
+
+## Authors
+[@enesokullu](https://twitter.com/EnesOkullu)
 
 ### Prefill helps you to add desired value into left side of number in order to align them right side.
 
