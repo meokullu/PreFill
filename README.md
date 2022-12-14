@@ -21,12 +21,15 @@ Returns prefilled value
 ###
 
 long number: Signed long numerical value.
+
 byte maxNumberOfDigit: Maximum number of digit of numerical value.
+
 string/char text: Desired value to add at left side.
 
 ###
 
 List<long> numberList: List of signed long numberical values.
+ 
 string/char text: Desired value to add at left side.
 
 ```
