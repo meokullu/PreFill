@@ -13,12 +13,9 @@ PreFill is optimized for cpu-intense applications.
 ```
 * PreFilledCustom(long number, byte maxNumberOfDigit, string text = " ")
 * PreFilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
-* PreFilledCustom(List<long> numberList, string text = " ")
-* PrefilledCustom(List<long> numberList, char text = ' ')
 ```
-Returns prefilled value
 
-###
+Returns prefilled value. (string)
 
 long number: Signed long numerical value.
 
@@ -26,19 +23,44 @@ byte maxNumberOfDigit: Maximum number of digit of numerical value.
 
 string/char text: Desired value to add at left side.
 
-###
+```
+* PreFilledCustom(List<long> numberList, string text = " ")
+* PrefilledCustom(List<long> numberList, char text = ' ')
+```
+
+Returns prefilled values. (List<string>)
 
 List<long> numberList: List of signed long numberical values.
  
 string/char text: Desired value to add at left side.
 
 ```
-* PreFillCustom()
+* PreFillCustom(long number, int maxNumberOfDigit, string text = " ")
+* PreFillCustom(long number, int maxNumberOfDigit, char text = ' ')
+* PreFillCustom(ulong number, int maxNumberOfDigit, string text = " ")
+* PreFillCustom(ulong number, int maxNumberOfDigit, char text = ' ')
 ```
 
+Returns **prefill value only**. (string)
+
+ulong/long number: Signed or unsigned long numberical value.
+
+int maxNumberOfDigit: Maximum number of digit of numerical value.
+
+string/char text: Desired value to add at left side.
+
 ```
-* PreFill[1-8]()
+* PreFill[1-8](long number, char text = ' ')
+* PreFill[1-8](ulong number, char text = ' ')
 ```
+
+Returns ** prefill value only**. (string)
+
+[1-8]: Maximum digit number of prefilled values.
+
+ulong/long number: Signed or unsigned long numerical value.
+
+char text: Desired value to add at left side.
 
 ## Example Usage
 
@@ -51,6 +73,11 @@ string/char text: Desired value to add at left side.
 * 1.0.0 Initial Release
   * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
   * See CHANGELOG.md
+  
+## Task list
+- [ ] Add PrefilledCustom() methods for ulong
+- [ ] Add PrefilledCustom() methods for other supported data types, if they are required to use seperately from long and ulong data types for cpu-intense application usage
+- [ ] Add GetNumberOfDigit method with conditional ordering to increase cpu-intense applications while values are mostly predicted about their positivity.
 
 ## Licence
 No licence is required.
