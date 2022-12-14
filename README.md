@@ -11,7 +11,10 @@ PreFill is optimized for cpu-intense applications.
 ## Listed Methods
 
 ```
-* PreFilledCustom()
+* PreFilledCustom(long number, byte maxNumberOfDigit, string text = " ")
+* PreFilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
+* PreFilledCustom(List<long> numberList, string text = " ")
+* PrefilledCustom(List<long> numberList, char text = ' ')
 ```
 Returns prefilled value
 
