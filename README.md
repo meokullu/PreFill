@@ -17,11 +17,11 @@ PreFill is optimized for cpu-intense applications.
 
 Returns prefilled value. (string)
 
-long number: Signed long numerical value.
+** long number: Signed long numerical value.
 
-byte maxNumberOfDigit: Maximum number of digit of numerical value.
+** byte maxNumberOfDigit: Maximum number of digit of numerical value.
 
-string/char text: Desired value to add at left side.
+** string/char text: Desired value to add at left side.
 
 ```
 * PreFilledCustom(List<long> numberList, string text = " ")
@@ -30,9 +30,9 @@ string/char text: Desired value to add at left side.
 
 Returns prefilled values. (List<string>)
 
-List<long> numberList: List of signed long numberical values.
+** List<long> numberList: List of signed long numberical values.
  
-string/char text: Desired value to add at left side.
+** string/char text: Desired value to add at left side.
 
 ```
 * PreFillCustom(long number, int maxNumberOfDigit, string text = " ")
@@ -43,11 +43,11 @@ string/char text: Desired value to add at left side.
 
 Returns **prefill value only**. (string)
 
-ulong/long number: Signed or unsigned long numberical value.
+** ulong/long number: Signed or unsigned long numberical value.
 
-int maxNumberOfDigit: Maximum number of digit of numerical value.
+** int maxNumberOfDigit: Maximum number of digit of numerical value.
 
-string/char text: Desired value to add at left side.
+** string/char text: Desired value to add at left side.
 
 ```
 * PreFill[1-8](long number, char text = ' ')
@@ -56,16 +56,18 @@ string/char text: Desired value to add at left side.
 
 Returns ** prefill value only**. (string)
 
-[1-8]: Maximum digit number of prefilled values.
+** [1-8]: Maximum digit number of prefilled values.
 
-ulong/long number: Signed or unsigned long numerical value.
+** ulong/long number: Signed or unsigned long numerical value.
 
-char text: Desired value to add at left side.
+** char text: Desired value to add at left side.
 
 ## Example Usage
 
 ###
+ 
  PrefilledCustom(5, 4, '0') = "0005"
+ 
  PrefilledCustom(55, 3, ' ') = "  55"
 
 ## Version History
