@@ -81,6 +81,7 @@ Returns ** prefill value only**. (string)
 - [ ] Add PrefilledCustom() methods for other supported data types, if they are required to use seperately from long and ulong data types for cpu-intense application usage
 - [ ] Add GetNumberOfDigit method with conditional ordering to increase cpu-intense applications while values are mostly predicted about their positivity.
 - [ ] Add PrefilledCustom() methods for string
+- [ ] Add and/or mark methods safe/unsafe.
 
 ## Licence
 No licence is required.
