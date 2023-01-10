@@ -4,7 +4,7 @@ PreFill is a project to align horizontally listed output values to right side in
 
 ## Description
 
-PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (sbyte, byte, int, uint, long, ulong)
+PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (sbyte, byte, int, uint, long, ulong, string)
 
 PreFill is optimized for cpu-intense applications.
 
@@ -13,25 +13,52 @@ PreFill is optimized for cpu-intense applications.
 ```
 * PreFilledCustom(long number, byte maxNumberOfDigit, string text = " ")
 * PreFilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
+* PrefilledCustom(ulong number, byte maxNumberOfDigit, string text = " ")
+* PreFilledCustom(ulong number, byte maxNumberOfDigit, char text = ' ')
 ```
 
 Returns prefilled value. (string)
 
-* long number: Signed long numerical value.
+* ulong/long number: Unsigned long or long number value
 
 * byte maxNumberOfDigit: Maximum number of digit of numerical value.
 
 * string/char text: Desired value to add at left side.
 
 ```
+* PreFilledCustom(string context, int maxLength, string text = " ")
+* PreFilledCustom(string context, int maxLength, char text = ' ')
+```
+Returns prefilled value. (string)
+
+* string context: String text value.
+
+* int maxLength: Maximum length of text value.
+
+* string/char text: Desired value to add at left side.
+
+```
 * PreFilledCustom(List<long> numberList, string text = " ")
+* PrefilledCustom(List<long> numberList, char text = ' ')
+* PrefilledCustom(List<ulong> numberList, string text = " ")
 * PrefilledCustom(List<long> numberList, char text = ' ')
 ```
 
 Returns prefilled values. (List<string>)
 
-* List<long> numberList: List of signed long numberical values.
+* List<long>/List<ulong> numberList: List of signed long or unsigned long numerical values.
  
+* string/char text: Desired value to add at left side.
+
+```
+* PreFilledCustom(List<string> contextList, string text = " ")
+* PreFilledCustom(List<string) contextList, char text = ' ')
+```
+
+Returns prefilled values (List<string>)
+
+* List<string> contextList: List of string values.
+
 * string/char text: Desired value to add at left side.
 
 ```
@@ -62,26 +89,45 @@ Returns ** prefill value only**. (string)
 
 * char text: Desired value to add at left side.
 
+```
+* PreFillCustom(string text, int maxLength, string stringValue = " ")
+* PreFillCustom(string text, int maxLength, char charValue = ' ')
+```
+
+Returns **prefill value only**. (string)
+
+* string text: String text value.
+
+* int maxLength: Maximum length of string value.
+
+* string stringValue/char charValue: Desired value to add at left side.
+
 ## Example Usage
 
 ###
  
- PrefilledCustom(5, 4, '0') = "0005"
+ PreFilledCustom(5, 4, '0') = "0005"
  
- PrefilledCustom(55, 3, ' ') = "  55"
+ PreFilledCustom(55, 3, ' ') = "  55"
+ 
+ PreFilledCustom("abc", 5, 'd') = "ddabc"
 
 ## Version History
 
+* 1.1.0
+ * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
+ * See [changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
+
 * 1.0.0 Initial Release
   * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
-  * See CHANGELOG.md
+  * See [changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
   
 ## Task list
-- [ ] Add PrefilledCustom() methods for ulong
-- [ ] Add PrefilledCustom() methods for other supported data types, if they are required to use seperately from long and ulong data types for cpu-intense application usage
-- [ ] Add GetNumberOfDigit method with conditional ordering to increase cpu-intense applications while values are mostly predicted about their positivity.
-- [ ] Add PrefilledCustom() methods for string
+- [x] Add PrefilledCustom() methods for ulong
+- [x] Add PrefilledCustom() methods for other supported data types, if they are required to use seperately from long and ulong data types for cpu-intense application usage
+- [x] Add PrefilledCustom() methods for string
 - [ ] Add and/or mark methods safe/unsafe.
+- [ ] Add GetNumberOfDigit method with conditional ordering to increase cpu-intense applications while values are mostly predicted about their positivity.
 
 ## Licence
 No licence is required.
