@@ -105,12 +105,11 @@ Returns **prefill value only**. (string)
 ## Example Usage
 
 ###
+PreFilledCustom(5, 4, '0') = "0005"
  
- PreFilledCustom(5, 4, '0') = "0005"
+PreFilledCustom(55, 3, ' ') = "  55"
  
- PreFilledCustom(55, 3, ' ') = "  55"
- 
- PreFilledCustom("abc", 5, 'd') = "ddabc"
+PreFilledCustom("abc", 5, 'd') = "ddabc"
 
 ## Version History
 
