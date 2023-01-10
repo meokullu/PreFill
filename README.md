@@ -114,8 +114,8 @@ PreFilledCustom("abc", 5, 'd') = "ddabc"
 ## Version History
 
 * 1.1.0
- * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
- * See [changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
+  * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
+  * See [changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
 
 * 1.0.0 Initial Release
   * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
