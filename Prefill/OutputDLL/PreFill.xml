@@ -6,333 +6,329 @@
     <members>
         <member name="T:Prefill.PreFill">
             <summary>
-            Prefill, fills preceeding of value with desired character or string. E.g: PreFill(5) => 05 or 00000005 or "     5"
+            PreFill, adds desired character or text on the left of value in order to align it to the right side.
             </summary>
         </member>
         <member name="M:Prefill.PreFill.GetNumberOfDigit(System.Int64)">
             <summary>
-            Returns number of digit of a specified number. (Signed byte, short, int, long)
+            Calculates number of digit of a specified long number via using Math.Log10 methot. If number is negative it adds one more digit for minus sign. (Signed sbyte, short, int, long)
             </summary>
-            <param name="number">l:
-            A number whose number of digit to be found.
-            </param>
-            <returns>Minimum 1 and maximum 20 on negative integer numbers, minimum 1 and  maximum 19 on positive integer numbers.</returns>
+            <param name="number">A number whose number of digit to be found.</param>
+            <returns>Digit number of speficied long number. If number is negative returns one additional digit for minus sign. If number is zero returns 1.</returns>
         </member>
         <member name="M:Prefill.PreFill.GetNumberOfDigit(System.UInt64)">
             <summary>
-            Returns number of digit of a specified number. (Unsigned sbyte, ushort, uint, ulong)
+            Calculates number of digit of a specified unsigned long number via using Math.Log10 methot.  (Unsigned byte, ushort, uint, ulong)
             </summary>
-            <param name="number">ul:
-            A number whose number of digit to be found.
-            </param>
-            <returns>Minimum 0 and maximum 19 on positive integer numbers.</returns>
+            <param name="number">A number whose number of digit to be found.</param>
+            <returns>Digit number of speficied unsinged long number.</returns>
         </member>
         <member name="M:Prefill.PreFill.GetLengthOfString(System.String)">
             <summary>
-            Returns length of a specified text. (String)
+            Calculates length of a specified text via using string.Length. (String)
             </summary>
             <param name="text">A text whose length to be found.</param>
             <returns>The number of characters of specified text.</returns>
         </member>
         <member name="M:Prefill.PreFill.FillChar(System.Int32,System.Char)">
             <summary>
-            Returns prefilling value for a specified text. (dynamically)
+            Creates a string value for prefilling value via repeating text with speficied count times.
             </summary>
             <param name="count">Number of filling.</param>
             <param name="text">Selected character to fill.</param>
-            <returns>A string whose filled specified char.</returns>
+            <returns>A string whose filled with specified char.</returns>
         </member>
         <member name="M:Prefill.PreFill.FillString(System.Int32,System.String)">
             <summary>
-            Returns prefilling value for a specified text. (dynamically)
+            Creates a string value for prefilling value via repeating text with specified count times.
             </summary>
-            <param name="count">Number of filling characters.</param>
+            <param name="count">Number of filling string value.</param>
             <param name="text">Selected text to fill.</param>
-            <returns>String</returns>
+            <returns>A string whose filled with specified string.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Int64,System.Byte,System.String)">
             <summary>
-            Returns prefilled text for a specified number. Add //TODO:
+            Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
             </summary>
             <param name="number">Number of filling.</param>
             <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
             <param name="text">Selected text to fill before number.</param>
-            <returns>A number prefilled by selected text with maximum digit set.</returns>
+            <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Int64,System.Byte,System.Char)">
             <summary>
-            Returns prefilled text for a specified number.
+            Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
             </summary>
             <param name="number">Number of filling.</param>
             <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
             <param name="text">Selected text to fill before number.</param>
-            <returns>A number prefilled by selected text with maximum digit set.</returns>
+            <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Int64},System.String)">
             <summary>
-            Returns prefilled text list for a specified list number.
+            Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element. Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
             </summary>
             <param name="numberList">List of specified numbers.</param>
-            <param name="text">Selected text to fill before number.</param>
-            <returns>Concentration of prefill string and number itself.</returns>
+            <param name="text">Selected text to fill before numbers.</param>
+            <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Int64},System.Char)">
             <summary>
-            Returns prefilled text list for a specified list number.
+            Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element. Creates a list of concatenated prefilling value (char) and number value itself via using longest length as maximum length. 
             </summary>
             <param name="numberList">List of specified numbers.</param>
-            <param name="text">Selected text to fill before number.</param>
-            <returns>Concentration of prefill string and number itself.</returns>
+            <param name="text">Selected text to fill before numbers.</param>
+            <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.UInt64,System.Byte,System.String)">
             <summary>
-            Returns prefilled text for a specified number.
+            Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
             </summary>
-            <param name="number">Number of filling.</param>
+            <param name="number">A specified number whose prefilling value to be found.</param>
             <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
             <param name="text">Selected text to fill before number.</param>
-            <returns>Concentration of prefill string and number itself.</returns>
+            <returns>Concentration of prefilled string and number itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.UInt64,System.Byte,System.Char)">
             <summary>
-            Returns prefilled text list for a specified list number.
+            Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
             </summary>
             <param name="number">Number of filling.</param>
             <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
             <param name="text">Selected text to fill before number.</param>
-            <returns>Concentration of prefill string and number itself.</returns>
+            <returns>Concentration of prefilled string and number itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.UInt64},System.String)">
             <summary>
-            Returns prefilled text list for a specified list number.
+            Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element. Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
             </summary>
             <param name="numberList">List of specified numbers.</param>
             <param name="text">Selected text to fill before number.</param>
-            <returns>Concentration of prefill string and number itself.</returns>
+            <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.UInt64},System.Char)">
             <summary>
-            Returns prefilled text list for a specified list number.
+            Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element. Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
             </summary>
             <param name="numberList">List of specified numbers.</param>
             <param name="text">Selected text to fill before number.</param>
-            <returns>Concentration of prefill string and number itself.</returns>
+            <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.String,System.Int32,System.String)">
             <summary>
-            Returns prefilled text for a specified text.
+            Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with string value itself at the end.
             </summary>
-            <param name="context">Specified text value.</param>
-            <param name="maxLenght">Maximum length of text value with prefilling.</param>
+            <param name="context">A text whose prefill value to be found.</param>
+            <param name="maxLength">Maximum length of text value with prefilling.</param>
             <param name="text">Specified text to be used for prefilling.</param>
-            <returns>Concentration of prefill string and context itself.</returns>
+            <returns>Concentration of prefilled string and context itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.String,System.Int32,System.Char)">
             <summary>
-            Returns prefilled text for a specified text.
+            Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with string value itself at the end.
             </summary>
-            <param name="context"></param>
-            <param name="maxLenght"></param>
-            <param name="text"></param>
-            <returns>Concentration of prefill string and context itself.</returns>
+            <param name="context">A text whose prefill value to be found.</param>
+            <param name="maxLength">Maximum length of text value with prefilling.</param>
+            <param name="text">Specified text to be used for prefilling.</param>
+            <returns>Concentration of prefilled string and context itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.String},System.String)">
             <summary>
-            Returns prefilled text list for a specified list number.
+            Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element. Creates a list of concatenated prefilling value (string) and string value itself via using longest length as maximum length.
             </summary>
-            <param name="contextList"></param>
-            <param name="text"></param>
-            <returns>Concentration of prefill string and context itself.</returns>
+            <param name="contextList">List of specified text.</param>
+            <param name="text">Selected text to fill before context.</param>
+            <returns>Concentration of prefilled list of string and context itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.String},System.Char)">
             <summary>
-            Returns prefilled text list for a specified list number.
+            Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element. Creates a list of concatenated prefilling value (string) and string value itself via using longest length as maximum length.
             </summary>
-            <param name="contextList"></param>
-            <param name="text">Selected text to fill before content.</param>
-            <returns>Concentration of prefill string and context itself.</returns>
+            <param name="contextList">List of specified text.</param>
+            <param name="text">Selected text to fill before context.</param>
+            <returns>Concentration of prefilled list of string and context itself.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFillCustom(System.Int64,System.Int32,System.String)">
             <summary>
-            Returns prefill value for a specified number
+            Calculates number of digit of given number then creates string for prefilling value of specified text before given number on limit of maximum number of digit.
             </summary>
-            <param name="number"></param>
-            <param name="maxNumberOfDigit"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+            <param name="text">Specified text whose will be used for prefilling.</param>
+            <returns>Returns prefill value for a specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFillCustom(System.Int64,System.Int32,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of given number then creates string with prefilling value of specified character before given number on limit of maximum number of digit.
             </summary>
-            <param name="number"></param>
-            <param name="maxNumberOfDigit"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for a specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill1(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto one character if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">A text that will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill2(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto two characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill3(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto three characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill4(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto four characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill5(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto five characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill6(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto six characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill7(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto seven characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill8(System.Int64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto eight characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFillCustom(System.UInt64,System.Int32,System.String)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of given number then creates string with prefilling value of specified character before given number on limit of maximum number of digit.
             </summary>
-            <param name="number"></param>
-            <param name="maxDigit"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFillCustom(System.UInt64,System.Int32,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of given number then creates string with prefilling value of specified character before given number on limit of maximum number of digit.
             </summary>
-            <param name="number"></param>
-            <param name="maxDigit"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill1(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value for a specified number.
+            Calculates number of digit of specified number then adds upto one character if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill2(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value up to 8 characters for a specified number.
+            Calculates number of digit of specified number then adds upto two characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill3(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value up to 8 characters for a specified number.
+            Calculates number of digit of specified number then adds upto three characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill4(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value up to 4 characters for a specified number.
+            Calculates number of digit of specified number then adds upto four characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill5(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value up to 5 characters for a specified number.
+            Calculates number of digit of specified number then adds upto five characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill6(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value up to 6 characters for a specified number.
+            Calculates number of digit of specified number then adds upto six characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill7(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value up to 7 characters for a specified number.
+            Calculates number of digit of specified number then adds upto seven characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFill8(System.UInt64,System.Char)">
             <summary>
-            Returns prefill value up to 8 characters for a specified number.
+            Calculates number of digit of specified number then adds upto eight characters if needed.
             </summary>
-            <param name="number"></param>
-            <param name="text"></param>
-            <returns></returns>
+            <param name="number">A number whose prefill value to be found.</param>
+            <param name="text">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified number.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFillCustom(System.String,System.Int32,System.String)">
             <summary>
-            Returns prefill value for a specified text.
+            Calculates length of given text then creates string with prefilling value of specified character before given numtextber on limit of maximum length.
             </summary>
-            <param name="text">String value</param>
-            <param name="maxLenght">Maximum </param>
-            <param name="stringValue"></param>
-            <returns></returns>
+            <param name="text">A text whose prefill value to be found.</param>
+            <param name="maxLength">Maximum length of context including specified number and prefilling.</param>
+            <param name="stringValue">Specified text whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified text.</returns>
         </member>
         <member name="M:Prefill.PreFill.PreFillCustom(System.String,System.Int32,System.Char)">
             <summary>
-            Returns prefill value for a specified text.
+            Calculates length of given text then creates string with prefilling value of specified character before given numtextber on limit of maximum length.
             </summary>
-            <param name="text"></param>
-            <param name="maxLenght"></param>
-            <param name="charValue"></param>
-            <returns></returns>
+            <param name="text">A text whose prefill value to be found.</param>
+            <param name="maxLength">Maximum length of context including specified number and prefilling.</param>
+            <param name="charValue">Specified character whose will be used for prefilling.</param>
+            <returns>Returns prefill value for specified text.</returns>
         </member>
     </members>
 </doc>
