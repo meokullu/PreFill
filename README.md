@@ -113,19 +113,19 @@ PreFilledCustom("abc", 5, 'd') => "ddabc"
 
 PreFilledCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"0005", "0004", "0055", "0045", "0032", "0375"}
 
-PreFillCustom(5, 4, '0') => "    "
+PreFillCustom(5, 4, '0') => "000"
 
-PreFillCustom(55, 3, ' ') => "   "
+PreFillCustom(55, 3, ' ') => " "
 
-PreFillCustom("abc", 5, 'd') => "ddabc"
+PreFillCustom("abc", 5, 'd') => "dd"
 
 PreFillCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"   ", "   ", "  ", "  ", " "}
 
-PreFill1(5, ' ') => "5"
+PreFill1(5, ' ') => ""
 
-PreFill2(5, ' ') => " 5"
+PreFill2(5, ' ') => " "
  
-PreFill8(5, ' ') => "       5"
+PreFill8(5, ' ') => "       "
 
 ## Version History
 
