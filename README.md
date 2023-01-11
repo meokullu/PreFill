@@ -117,7 +117,7 @@ PreFillCustom(5, 4, '0') => "    "
 
 PreFillCustom(55, 3, ' ') => "   "
 
-PreFillCustom("abc", 5, 'd') => "ddddd"
+PreFillCustom("abc", 5, 'd') => "ddabc"
 
 PreFillCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"   ", "   ", "  ", "  ", " "}
 
