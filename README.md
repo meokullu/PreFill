@@ -81,7 +81,7 @@ Returns **prefill value only**. (string)
 * PreFill[1-8](ulong number, char text = ' ')
 ```
 
-Returns ** prefill value only**. (string)
+Returns **prefill value only**. (string)
 
 * [1-8]: Maximum digit number of prefilled values.
 
@@ -105,11 +105,27 @@ Returns **prefill value only**. (string)
 ## Example Usage
 
 ###
-PreFilledCustom(5, 4, '0') = "0005"
+PreFilledCustom(5, 4, '0') => "0005"
  
-PreFilledCustom(55, 3, ' ') = "  55"
+PreFilledCustom(55, 3, ' ') => "  55"
  
-PreFilledCustom("abc", 5, 'd') = "ddabc"
+PreFilledCustom("abc", 5, 'd') => "ddabc"
+
+PreFilledCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"0005", "0004", "0055", "0045", "0032", "0375"}
+
+PreFillCustom(5, 4, '0') => "    "
+
+PreFillCustom(55, 3, ' ') => "   "
+
+PreFillCustom("abc", 5, 'd') => "ddabc"
+
+PreFillCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"   ", "   ", "  ", "  ", " "}
+
+PreFill1(5, ' ') => "5"
+
+PreFill2(5, ' ') => " 5"
+ 
+PreFill8(5, ' ') => "       5"
 
 ## Version History
 
@@ -125,8 +141,11 @@ PreFilledCustom("abc", 5, 'd') = "ddabc"
 - [x] Add PrefilledCustom() methods for ulong
 - [x] Add PrefilledCustom() methods for other supported data types, if they are required to use seperately from long and ulong data types for cpu-intense application usage
 - [x] Add PrefilledCustom() methods for string
-- [ ] Add and/or mark methods safe/unsafe.
+- [ ] ~~Add and/or mark methods safe/unsafe.~~
 - [ ] Add GetNumberOfDigit method with conditional ordering to increase cpu-intense applications while values are mostly predicted about their positivity.
+
+### Knowns bugs ###
+- [ ] If length of desired text is more than one character repeatence of adding it may make result not aligned.
 
 ## Licence
 No licence is required.
