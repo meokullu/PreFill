@@ -111,7 +111,7 @@ PreFilledCustom(55, 3, ' ') => "  55"
  
 PreFilledCustom("abc", 5, 'd') => "ddabc"
 
-PreFilledCustom({5,4,55,45,32,375}, 4, '0') => {"0005", "0004", "0055", "0045", "0032", "0375"}
+PreFilledCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"0005", "0004", "0055", "0045", "0032", "0375"}
 
 PreFillCustom(5, 4, '0') => "    "
 
@@ -119,7 +119,7 @@ PreFillCustom(55, 3, ' ') => "   "
 
 PreFillCustom("abc", 5, 'd') => "ddddd"
 
-PreFillCustom({5,4,55,45,32,375}, 4, '0') => {"   ", "   ", "  ", "  ", " "}
+PreFillCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"   ", "   ", "  ", "  ", " "}
 
 PreFill1(5, ' ') => "5"
 
