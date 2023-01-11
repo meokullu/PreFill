@@ -124,6 +124,8 @@ PreFillCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"   ", "   ", "  ", "  ", " "
 PreFill1(5, ' ') => "5"
 
 PreFill2(5, ' ') => " 5"
+ 
+PreFill8(5, ' ') => "       5"
 
 ## Version History
 
