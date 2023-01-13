@@ -127,7 +127,7 @@ PreFill1(5, ' ') => ""
 
 PreFill2(5, ' ') => " "
  
-<pre>PreFill8(5, ' ') => "       "</pre>
+PreFill8(5, ' ') => "       "
 ```
 
 ## Version History
