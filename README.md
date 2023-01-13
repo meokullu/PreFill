@@ -105,6 +105,8 @@ Returns **prefill value only**. (string)
 ## Example Usage
 
 ###
+
+```
 PreFilledCustom(5, 4, '0') => "0005"
  
 PreFilledCustom(55, 3, ' ') => "  55"
@@ -126,6 +128,7 @@ PreFill1(5, ' ') => ""
 PreFill2(5, ' ') => " "
  
 <pre>PreFill8(5, ' ') => "       "</pre>
+```
 
 ## Version History
 
