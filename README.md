@@ -146,6 +146,7 @@ PreFill8(5, ' ') => "       "
 - [x] Add PrefilledCustom() methods for string
 - [ ] ~~Add and/or mark methods safe/unsafe.~~
 - [ ] Add GetNumberOfDigit method with conditional ordering to increase cpu-intense applications while values are mostly predicted about their positivity.
+- [ ] Support null values
 
 ### Knowns bugs ###
 - [ ] If length of desired text is more than one character repeatence of adding it may make result not aligned.
