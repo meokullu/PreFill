@@ -11,10 +11,16 @@ PreFill is optimized for cpu-intense applications.
 ## Listed Methods
 
 ```
-* PreFilledCustom(long number, byte maxNumberOfDigit, string text = " ")
-* PreFilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
-* PrefilledCustom(ulong number, byte maxNumberOfDigit, string text = " ")
-* PreFilledCustom(ulong number, byte maxNumberOfDigit, char text = ' ')
+PreFilledCustom(long number, byte maxNumberOfDigit, string text = "")
+```
+```
+PreFilledCustom(long number, byte maxNumberOfDigit, char text = '')
+```
+```
+PrefilledCustom(ulong number, byte maxNumberOfDigit, string text = "")
+```
+```
+PreFilledCustom(ulong number, byte maxNumberOfDigit, char text = '')
 ```
 
 Returns prefilled value. (string)
@@ -26,8 +32,10 @@ Returns prefilled value. (string)
 * string/char text: Desired value to add at left side.
 
 ```
-* PreFilledCustom(string context, int maxLength, string text = " ")
-* PreFilledCustom(string context, int maxLength, char text = ' ')
+PreFilledCustom(string context, int maxLength, string text = "")
+```
+```
+PreFilledCustom(string context, int maxLength, char text = '')
 ```
 Returns prefilled value. (string)
 
@@ -38,10 +46,16 @@ Returns prefilled value. (string)
 * string/char text: Desired value to add at left side.
 
 ```
-* PreFilledCustom(List<long> numberList, string text = " ")
-* PrefilledCustom(List<long> numberList, char text = ' ')
-* PrefilledCustom(List<ulong> numberList, string text = " ")
-* PrefilledCustom(List<long> numberList, char text = ' ')
+PreFilledCustom(List<long> numberList, string text = "")
+```
+```
+PrefilledCustom(List<long> numberList, char text = '')
+```
+```
+PrefilledCustom(List<ulong> numberList, string text = "")
+```
+```
+PrefilledCustom(List<long> numberList, char text = '')
 ```
 
 Returns prefilled values. (List<string>)
@@ -51,8 +65,10 @@ Returns prefilled values. (List<string>)
 * string/char text: Desired value to add at left side.
 
 ```
-* PreFilledCustom(List<string> contextList, string text = " ")
-* PreFilledCustom(List<string) contextList, char text = ' ')
+PreFilledCustom(List<string> contextList, string text = "")
+```
+```
+PreFilledCustom(List<string) contextList, char text = '')
 ```
 
 Returns prefilled values (List<string>)
@@ -62,10 +78,16 @@ Returns prefilled values (List<string>)
 * string/char text: Desired value to add at left side.
 
 ```
-* PreFillCustom(long number, int maxNumberOfDigit, string text = " ")
-* PreFillCustom(long number, int maxNumberOfDigit, char text = ' ')
-* PreFillCustom(ulong number, int maxNumberOfDigit, string text = " ")
-* PreFillCustom(ulong number, int maxNumberOfDigit, char text = ' ')
+PreFillCustom(long number, int maxNumberOfDigit, string text = "")
+```
+```
+PreFillCustom(long number, int maxNumberOfDigit, char text = '')
+```
+```
+PreFillCustom(ulong number, int maxNumberOfDigit, string text = "")
+```
+```
+PreFillCustom(ulong number, int maxNumberOfDigit, char text = '')
 ```
 
 Returns **prefill value only**. (string)
@@ -77,8 +99,10 @@ Returns **prefill value only**. (string)
 * string/char text: Desired value to add at left side.
 
 ```
-* PreFill[1-8](long number, char text = ' ')
-* PreFill[1-8](ulong number, char text = ' ')
+PreFill[1-8](long number, char text = '')
+```
+```
+PreFill[1-8](ulong number, char text = '')
 ```
 
 Returns **prefill value only**. (string)
@@ -90,8 +114,10 @@ Returns **prefill value only**. (string)
 * char text: Desired value to add at left side.
 
 ```
-* PreFillCustom(string text, int maxLength, string stringValue = " ")
-* PreFillCustom(string text, int maxLength, char charValue = ' ')
+PreFillCustom(string text, int maxLength, string stringValue = "")
+```
+```
+PreFillCustom(string text, int maxLength, char charValue = '')
 ```
 
 Returns **prefill value only**. (string)
@@ -106,29 +132,17 @@ Returns **prefill value only**. (string)
 
 ###
 
-```
-PreFilledCustom(5, 4, '0') => "0005"
- 
-PreFilledCustom(55, 3, ' ') => "  55"
- 
-PreFilledCustom("abc", 5, 'd') => "ddabc"
-
-PreFilledCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"0005", "0004", "0055", "0045", "0032", "0375"}
-
-PreFillCustom(5, 4, '0') => "000"
-
-PreFillCustom(55, 3, ' ') => " "
-
-PreFillCustom("abc", 5, 'd') => "dd"
-
-PreFillCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"   ", "   ", "  ", "  ", " "}
-
-PreFill1(5, ' ') => ""
-
-PreFill2(5, ' ') => " "
- 
-PreFill8(5, ' ') => "       "
-```
+* PreFilledCustom(5, 4, '0') => "0005"
+* PreFilledCustom(55, 3, ' ') => "  55"
+* PreFilledCustom("abc", 5, 'd') => "ddabc"
+* PreFilledCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"0005", "0004", "0055", "0045", "0032", "0375"}
+* PreFillCustom(5, 4, '0') => "000"
+* PreFillCustom(55, 3, ' ') => " "
+* PreFillCustom("abc", 5, 'd') => "dd"
+* PreFillCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"   ", "   ", "  ", "  ", " "}
+* PreFill1(5, ' ') => ""
+* PreFill2(5, ' ') => " "
+* PreFill8(5, ' ') => "       "
 
 ## Version History
 
