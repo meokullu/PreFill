@@ -2,6 +2,10 @@
 
 PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.
 
+![PreFill](https://repository-images.githubusercontent.com/575382775/fe896835-417e-442f-9544-a3df8a4ac154)
+
+[Check out on Nuget gallery](https://www.nuget.org/packages/PreFill/)
+
 ## Description
 
 PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (sbyte, byte, int, uint, long, ulong, string)
