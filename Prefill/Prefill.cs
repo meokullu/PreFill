@@ -409,7 +409,10 @@ namespace Prefill
         public static string PreFillCustom(long number, int maxNumberOfDigit, string text = " ")
         {
             //
-            int fillCount = maxNumberOfDigit - GetNumberOfDigit(number);
+            int textLength = GetLengthOfString(text);
+
+            //
+            int fillCount = (maxNumberOfDigit/textLength) - GetNumberOfDigit(number);
 
             return FillString(fillCount, text);
         }
@@ -718,7 +721,10 @@ namespace Prefill
         public static string PreFillCustom(ulong number, int maxDigit, string text = " ")
         {
             //
-            int digitNumber = maxDigit - GetNumberOfDigit(number);
+            int textLength = GetLengthOfString(text);
+
+            //
+            int digitNumber = (maxDigit/textLength) - GetNumberOfDigit(number);
 
             return FillString(digitNumber, text);
         }
@@ -1040,7 +1046,10 @@ namespace Prefill
         public static string PreFillCustom(string text, int maxLength, string stringValue = " ")
         {
             //
-            int textLength = maxLength - GetLengthOfString(text);
+            int stringValueLength = GetLengthOfString(stringValue);
+
+            //
+            int textLength = (maxLength/stringValueLength) - GetLengthOfString(text);
 
             //
             return FillString(textLength, stringValue);
