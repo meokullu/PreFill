@@ -151,11 +151,11 @@ Returns **prefill value only**. (string)
 ## Version History
 
 * 1.3.0 (Upcoming)
- * Text length is now used to repeat of filling.
- * Support null values.
+  * Text length is now used to repeat of filling.
+  * Support null values.
 
 * 1.2.0
- * Added comments to methods.
+  * Added comments to methods.
   
 * 1.1.0
   * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
