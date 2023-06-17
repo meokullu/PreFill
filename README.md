@@ -150,7 +150,7 @@ Returns **prefill value only**. (string)
 
 ## Version History
 
-# 1.3.0 (Upcoming)
+* 1.3.0 (Upcoming)
  * Text length is now used to repeat of filling.
  * Support null values.
 
