@@ -15,7 +15,7 @@
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>alignment; legibility</PackageTags>
-    <PackageReleaseNotes>NuGet ready version</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>

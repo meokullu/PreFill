@@ -150,6 +150,10 @@ Returns **prefill value only**. (string)
 
 ## Version History
 
+* 1.2.0 (Upcoming)
+  * Text length is now used to repeat of filling.
+  * Support null values.
+  
 * 1.1.0
   * See [commit change](https://github.com/meokullu/PreFill/commits/master) or See [release history](https://github.com/meokullu/PreFill/releases)
   * See [changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
@@ -159,12 +163,6 @@ Returns **prefill value only**. (string)
   * See [changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
   
 ## Task list
-- [x] Add PrefilledCustom() methods for ulong
-- [x] Add PrefilledCustom() methods for other supported data types, if they are required to use seperately from long and ulong data types for cpu-intense application usage
-- [x] Add PrefilledCustom() methods for string
-- [ ] ~~Add and/or mark methods safe/unsafe.~~
-- [ ] Add GetNumberOfDigit method with conditional ordering to increase cpu-intense applications while values are mostly predicted about their positivity.
-- [ ] Support null values
 
 ### Knowns bugs ###
 - [ ] If length of desired text is more than one character repeatence of adding it may make result not aligned.
