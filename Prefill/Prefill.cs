@@ -6,7 +6,7 @@ using System.Text;
 namespace Prefill
 {
     /// <summary>
-    /// PreFill, adds desired character or text on the left of value in order to align it to the right side.
+    /// PreFill, adds desired character or text on the left of value or list of values  in order to align it/them to the right side.
     /// </summary>
     public static class PreFill
     {
@@ -19,19 +19,22 @@ namespace Prefill
         /// <returns>Digit number of speficied long number. If number is negative returns one additional digit for minus sign. If number is zero returns 1.</returns>
         private static byte GetNumberOfDigit(long number)
         {
-            //
+            // If number is zero.
             if (number == 0)
             {
+                // Number zero is one digit.
                 return 1;
             }
-            //
+            // If number is negative, number of digit is calculating via formula. 
             else if (number < 0)
             {
+                // Calculation of digit of number based on mathmatical logarithm base 10. Second adding of 1 is for minus sign on negative numbers.
                 return (byte)Math.Floor(Math.Log10(Math.Abs(number)) + 1 + 1);
             }
-            //
+            // if number is positive, number of digit is calculating via formula.
             else
             {
+                // Calculation of digit of number based on mathmatical logarithm base 10.
                 return (byte)Math.Floor(Math.Log10(number) + 1);
             }
         }
@@ -43,14 +46,16 @@ namespace Prefill
         /// <returns>Digit number of speficied unsinged long number.</returns>
         private static byte GetNumberOfDigit(ulong number)
         {
-            //
+            // If number is zero.
             if (number == 0)
             {
+                // Number zero is one digit.
                 return 1;
             }
-            //
+            // If number is not zero, number of digit is calculating via formula.
             else
             {
+                // Calculation of digit of number based on mathmatical logarithm base 10.
                 return (byte)Math.Floor(Math.Log10(number) + 1);
             }
         }
@@ -66,6 +71,7 @@ namespace Prefill
         /// <returns>The number of characters of specified text.</returns>
         private static int GetLengthOfString(string text)
         {
+            // Returning text's length via string.Length.
             return text.Length;
         }
 
@@ -81,20 +87,20 @@ namespace Prefill
         /// <returns>A string whose filled with specified char.</returns>
         private static string FillChar(int count, char text)
         {
-            //
+            // Creating an instance of StringBuilder().
             StringBuilder sb = new StringBuilder();
 
-            //
+            // Loop of count.
             while (count + 1 > 0)
             {
-                //
+                // Adding text into StringBuilder instance.
                 sb.Append(text);
 
-                //
+                // Decreasing count on the loop.
                 count--;
             }
 
-            //
+            // Returning of StringBuilder instance.
             return sb.ToString();
         }
 
@@ -106,20 +112,20 @@ namespace Prefill
         /// <returns>A string whose filled with specified string.</returns>
         private static string FillString(int count, string text)
         {
-            //
+            // Creating an instance of StringBuilder().
             StringBuilder sb = new StringBuilder();
 
-            //
+            // Loop of count.
             while (count + 1 > 0)
             {
-                //
+                // Adding text into StringBuilder instance.
                 sb.Append(text);
 
-                //
+                // Decreasing count on the loop.
                 count--;
             }
 
-            //
+            // Returning of StringBuilder instance.
             return sb.ToString();
         }
 
@@ -138,7 +144,7 @@ namespace Prefill
         /// <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
         public static string PrefilledCustom(long number, byte maxNumberOfDigit, string text = " ")
         {
-            //
+            // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxNumberOfDigit, text) + number;
         }
 
@@ -151,7 +157,7 @@ namespace Prefill
         /// <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
         public static string PrefilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
         {
-            //
+            // Calling PreFillCustom to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxNumberOfDigit, text) + number;
         }
 
@@ -166,21 +172,24 @@ namespace Prefill
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
             {
+                // Returning null value to indicate that numberList is null or empty.
                 return null;
             }
 
-            //
+            // Creating a list.
             List<string> resultList = new List<string>(numberList.Count);
 
-            //
+            // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
-            //
+            // Loop for list.
             foreach (var item in numberList)
             {
+                // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
             }
 
+            // Returning result as a list.
             return resultList;
         }
 
@@ -195,21 +204,24 @@ namespace Prefill
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
             {
+                // Returning null value to indicate that numberList is null or empty.
                 return null;
             }
 
-            //
+            // Creating a list.
             List<string> resultList = new List<string>(numberList.Count);
 
-            //
+            // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
-            //
+            // Loop for list.
             foreach (var item in numberList)
             {
+                // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
             }
 
+            // Returning result as a list.
             return resultList;
         }
 
@@ -226,7 +238,7 @@ namespace Prefill
         /// <returns>Concentration of prefilled string and number itself.</returns>
         public static string PrefilledCustom(ulong number, byte maxDigit, string text = " ")
         {
-            //
+            // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxDigit, text) + number;
         }
 
@@ -239,7 +251,7 @@ namespace Prefill
         /// <returns>Concentration of prefilled string and number itself.</returns>
         public static string PrefilledCustom(ulong number, byte maxDigit, char text = ' ')
         {
-            //
+            // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxDigit, text) + number;
         }
 
@@ -254,21 +266,24 @@ namespace Prefill
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
             {
+                // Returning null value to indicate that numberList is null or empty.
                 return null;
             }
 
-            //
+            // Creating a list.
             List<string> resultList = new List<string>(numberList.Count);
 
-            //
+            // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
-            //
+            // Loop for list.
             foreach (var item in numberList)
             {
+                // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
             }
 
+            // Returning result as a list.
             return resultList;
         }
 
@@ -283,21 +298,24 @@ namespace Prefill
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
             {
+                // Returning null value to indicate that numberList is null or empty.
                 return null;
             }
 
-            //
+            // Creating a list.
             List<string> resultList = new List<string>(numberList.Count);
 
-            //
+            // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
-            //
+            // Loop for list.
             foreach (var item in numberList)
             {
+                // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
             }
 
+            // Returning result as a list.
             return resultList;
         }
 
@@ -314,7 +332,7 @@ namespace Prefill
         /// <returns>Concentration of prefilled string and context itself.</returns>
         public static string PrefilledCustom(string context, int maxLength, string text = " ")
         {
-            //
+            // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return string.Concat(PreFillCustom(context, maxLength, text), context);
         }
 
@@ -327,7 +345,7 @@ namespace Prefill
         /// <returns>Concentration of prefilled string and context itself.</returns>
         public static string PrefilledCustom(string context, int maxLength, char text = ' ')
         {
-            //
+            // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return string.Concat(PreFillCustom(context, maxLength, text), context);
         }
 
@@ -342,22 +360,24 @@ namespace Prefill
             // Null check
             if (contextList == null || contextList.Count == 0)
             {
+                // Returning null value to indicate contextList is null or empty.
                 return null;
             }
 
-            //
+            // Creating a list.
             List<string> resultList = new List<string>(contextList.Count);
 
             // Maximum length of string on list.
             int maxFillCount = GetLengthOfString(contextList.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur));
 
-            //
+            // Loop for list.
             foreach (var item in contextList)
             {
+                // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
             }
 
-            //
+            // Returning result as a list.
             return resultList;
         }
 
@@ -372,21 +392,24 @@ namespace Prefill
             // Null check
             if (contextList == null || contextList.Count == 0)
             {
+                // Returning null value to indicate that numberList is null or empty.
                 return null;
             }
 
-            //
+            // Creating a list.
             List<string> resultList = new List<string>(contextList.Count);
 
             // Maximum length of string on list.
             int maxFillCount = GetLengthOfString(contextList.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur));
 
-            foreach(var item in contextList)
+            // Loop for list.
+            foreach (var item in contextList)
             {
+                // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
             }
 
-            //
+            // Returning result as a list.
             return resultList;
         }
 
@@ -408,12 +431,10 @@ namespace Prefill
         /// <returns>Returns prefill value for a specified number.</returns>
         public static string PreFillCustom(long number, int maxNumberOfDigit, string text = " ")
         {
-            //
-            int textLength = GetLengthOfString(text);
+            // Getting number of digit of given number.
+            int fillCount = maxNumberOfDigit - GetNumberOfDigit(number);
 
-            //
-            int fillCount = (maxNumberOfDigit/textLength) - GetNumberOfDigit(number);
-
+            // Calling FillString method to get prefilling value.
             return FillString(fillCount, text);
         }
 
@@ -426,9 +447,10 @@ namespace Prefill
         /// <returns>Returns prefill value for a specified number.</returns>
         public static string PreFillCustom(long number, int maxNumberOfDigit, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             int fillCount = maxNumberOfDigit - GetNumberOfDigit(number);
 
+            // Calling FillChar method to get prefilling value.
             return FillChar(fillCount, text);
         }
 
@@ -440,15 +462,18 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill1(long number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 0)
             {
+                // Returning given parameters as prefilling string.
                 return $"{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -461,19 +486,23 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill2(long number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 1)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -486,23 +515,28 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill3(long number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 2)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -515,26 +549,33 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill4(long number, char text = ' ')
         {
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 3)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -547,30 +588,38 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill5(long number, char text = ' ')
         {
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 4)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -583,34 +632,43 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill6(long number, char text = ' ')
         {
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 5)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 4)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -623,38 +681,48 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill7(long number, char text = ' ')
         {
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 6)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 5)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 4)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -667,42 +735,53 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill8(long number, char text = ' ')
         {
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
+            //
             if (digitNumber == 7)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 6)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 5)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 4)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -720,12 +799,10 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFillCustom(ulong number, int maxDigit, string text = " ")
         {
-            //
-            int textLength = GetLengthOfString(text);
+            // Getting number of digit of given number.
+            int digitNumber = maxDigit - GetNumberOfDigit(number);
 
-            //
-            int digitNumber = (maxDigit/textLength) - GetNumberOfDigit(number);
-
+            // Calling FillString method to get prefilling value.
             return FillString(digitNumber, text);
         }
 
@@ -738,9 +815,10 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFillCustom(ulong number, int maxDigit, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             int digitNumber = maxDigit - GetNumberOfDigit(number);
 
+            // Calling FillChar method to get prefilling value.
             return FillChar(digitNumber, text);
         }
 
@@ -752,16 +830,18 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill1(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 0)
             {
+                //
                 return $"{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -774,20 +854,23 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill2(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 1)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -800,24 +883,28 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill3(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 2)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -830,28 +917,33 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill4(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 3)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -864,32 +956,38 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill5(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 4)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -902,36 +1000,43 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill6(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 5)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 4)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -944,40 +1049,48 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill7(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 6)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 5)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 4)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -990,44 +1103,53 @@ namespace Prefill
         /// <returns>Returns prefill value for specified number.</returns>
         public static string PreFill8(ulong number, char text = ' ')
         {
-            //
+            // Getting number of digit of given number.
             byte digitNumber = GetNumberOfDigit(number);
 
             //
             if (digitNumber == 7)
             {
+                //
                 return $"{text}";
             }
             else if (digitNumber == 6)
             {
+                //
                 return $"{text}{text}";
             }
             else if (digitNumber == 5)
             {
+                //
                 return $"{text}{text}{text}";
             }
             else if (digitNumber == 4)
             {
+                //
                 return $"{text}{text}{text}{text}";
             }
             else if (digitNumber == 3)
             {
+                //
                 return $"{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 2)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 1)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}{text}";
             }
             else if (digitNumber == 0)
             {
+                //
                 return $"{text}{text}{text}{text}{text}{text}{text}{text}";
             }
             else
             {
+                // Returning empty string to indicate that prefilling text doesn't have a space with given number. 
                 return "";
             }
         }
@@ -1045,13 +1167,10 @@ namespace Prefill
         /// <returns>Returns prefill value for specified text.</returns>
         public static string PreFillCustom(string text, int maxLength, string stringValue = " ")
         {
-            //
-            int stringValueLength = GetLengthOfString(stringValue);
+            // Getting length of given text.
+            int textLength = maxLength - GetLengthOfString(text);
 
-            //
-            int textLength = (maxLength/stringValueLength) - GetLengthOfString(text);
-
-            //
+            // Calling FillString method to get prefilling value.
             return FillString(textLength, stringValue);
         }
 
@@ -1064,10 +1183,10 @@ namespace Prefill
         /// <returns>Returns prefill value for specified text.</returns>
         public static string PreFillCustom(string text, int maxLength, char charValue = ' ')
         {
-            // Char length is 1
+            // Getting length of given text.
             int textLength = maxLength - GetLengthOfString(text);
 
-            //
+            // Calling FillChar method to get prefilling value.
             return FillChar(textLength, charValue);
         }
 
