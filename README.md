@@ -18,18 +18,30 @@ PreFill is optimized for cpu-intense applications.
 PreFilledCustom(long number, byte maxNumberOfDigit, string text = "")
 ```
 ```
+PreFilledCustom(long? number, byte maxNumberOfDigit, string text = "")
+```
+```
 PreFilledCustom(long number, byte maxNumberOfDigit, char text = '')
+```
+```
+PreFilledCustom(long? number, byte maxNumberOfDigit, char text = '')
 ```
 ```
 PrefilledCustom(ulong number, byte maxNumberOfDigit, string text = "")
 ```
 ```
+PrefilledCustom(ulong? number, byte maxNumberOfDigit, string text = "")
+```
+```
 PreFilledCustom(ulong number, byte maxNumberOfDigit, char text = '')
 ```
+```
+PreFilledCustom(ulong? number, byte maxNumberOfDigit, char text = '')
+```
 
-Returns prefilled value. (string)
+Returns prefilled value. If value is null returns only prefilling value. (string)
 
-* ulong/long number: Unsigned long or long number value
+* ulong?/long? number: Unsigned long, long number value or null.
 
 * byte maxNumberOfDigit: Maximum number of digit of numerical value.
 
@@ -41,7 +53,7 @@ PreFilledCustom(string context, int maxLength, string text = "")
 ```
 PreFilledCustom(string context, int maxLength, char text = '')
 ```
-Returns prefilled value. (string)
+Returns prefilled value. If context is null, it returns only prefilling value. (string)
 
 * string context: String text value.
 
@@ -53,18 +65,30 @@ Returns prefilled value. (string)
 PreFilledCustom(List<long> numberList, string text = "")
 ```
 ```
+PreFilledCustom(List<long?> numberList, string text = "")
+```
+```
 PrefilledCustom(List<long> numberList, char text = '')
+```
+```
+PrefilledCustom(List<long?> numberList, char text = '')
 ```
 ```
 PrefilledCustom(List<ulong> numberList, string text = "")
 ```
 ```
+PrefilledCustom(List<ulong?> numberList, string text = "")
+```
+```
 PrefilledCustom(List<long> numberList, char text = '')
 ```
+```
+PrefilledCustom(List<long?> numberList, char text = '')
+```
 
-Returns prefilled values. (List<string>)
+Returns prefilled values. If element of given list is null, it returns only prefilling value for null element. (List<string>)
 
-* List<long>/List<ulong> numberList: List of signed long or unsigned long numerical values.
+* List<long?>/List<ulong?> numberList: List of signed long or unsigned long numerical values.
  
 * string/char text: Desired value to add at left side.
 
@@ -85,18 +109,30 @@ Returns prefilled values (List<string>)
 PreFillCustom(long number, int maxNumberOfDigit, string text = "")
 ```
 ```
+PreFillCustom(long? number, int maxNumberOfDigit, string text = "")
+```
+```
 PreFillCustom(long number, int maxNumberOfDigit, char text = '')
+```
+```
+PreFillCustom(long? number, int maxNumberOfDigit, char text = '')
 ```
 ```
 PreFillCustom(ulong number, int maxNumberOfDigit, string text = "")
 ```
 ```
+PreFillCustom(ulong? number, int maxNumberOfDigit, string text = "")
+```
+```
 PreFillCustom(ulong number, int maxNumberOfDigit, char text = '')
+```
+```
+PreFillCustom(ulong? number, int maxNumberOfDigit, char text = '')
 ```
 
 Returns **prefill value only**. (string)
 
-* ulong/long number: Signed or unsigned long numberical value.
+* ulong?/long? number: Signed or unsigned long numberical value.
 
 * int maxNumberOfDigit: Maximum number of digit of numerical value.
 
@@ -137,7 +173,8 @@ Returns **prefill value only**. (string)
 ###
 
 * PreFilledCustom(5, 4, '0') => "0005"
-* PreFilledCustom(55, 3, ' ') => "  55"
+* PreFilledCustom(null, 4, '0') => "0000"
+* PreFilledCustom(55, 3, ' ') => " 55"
 * PreFilledCustom("abc", 5, 'd') => "ddabc"
 * PreFilledCustom({5, 4, 55, 45, 32, 375}, 4, '0') => {"0005", "0004", "0055", "0045", "0032", "0375"}
 * PreFillCustom(5, 4, '0') => "000"
@@ -150,9 +187,10 @@ Returns **prefill value only**. (string)
 
 ## Version History
 
-* 1.3.0 (Upcoming)
-  * Text length is now used to repeat of filling.
-  * Support null values.
+* 1.3.0
+   * GetLengthOfString() private method was throwing error if given string value is null.
+   * PrefilledCustom() methods are added to support null values.
+   * PrefillCustom() methods are added to support null values.
 
 * 1.2.0
   * Added comments to methods.
