@@ -8,6 +8,11 @@
 
 ### Removed
 
+## [1.3.1]
+
+### Changed
+  * PrefilledCustom methods' name changed with PreFilledCustom().
+
 ## [1.3.0]
 
 ### Added
