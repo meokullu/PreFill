@@ -187,6 +187,9 @@ Returns **prefill value only**. (string)
 
 ## Version History
 
+# 1.3.1
+   * PrefilledCustom methods' name changed with PreFilledCustom.
+
 * 1.3.0
    * GetLengthOfString() private method was throwing error if given string value is null.
    * PrefilledCustom() methods are added to support null values.

@@ -211,7 +211,7 @@ namespace Prefill
         /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
-        public static string PrefilledCustom(long number, byte maxNumberOfDigit, string text = " ")
+        public static string PreFilledCustom(long number, byte maxNumberOfDigit, string text = " ")
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxNumberOfDigit, text) + number;
@@ -225,7 +225,7 @@ namespace Prefill
         /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set.  If number is null, it returns only prefillling value.</returns>
-        public static string PrefilledCustom(long? number, byte maxNumberOfDigit, string text = " ")
+        public static string PreFilledCustom(long? number, byte maxNumberOfDigit, string text = " ")
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxNumberOfDigit, text) + number;
@@ -238,7 +238,7 @@ namespace Prefill
         /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
-        public static string PrefilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
+        public static string PreFilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
         {
             // Calling PreFillCustom to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxNumberOfDigit, text) + number;
@@ -252,7 +252,7 @@ namespace Prefill
         /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set. If number is null, it returns only prefillling value.</returns>
-        public static string PrefilledCustom(long? number, byte maxNumberOfDigit, char text = ' ')
+        public static string PreFilledCustom(long? number, byte maxNumberOfDigit, char text = ' ')
         {
             // Calling PreFillCustom to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxNumberOfDigit, text) + number;
@@ -265,7 +265,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before numbers.</param>
         /// <returns>Concentration of prefilled list of string and number itself.</returns>
-        public static List<string> PrefilledCustom(List<long> numberList, string text = " ")
+        public static List<string> PreFilledCustom(List<long> numberList, string text = " ")
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -298,7 +298,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before numbers.</param>
         /// <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
-        public static List<string> PrefilledCustom(List<long?> numberList, string text = " ")
+        public static List<string> PreFilledCustom(List<long?> numberList, string text = " ")
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -331,7 +331,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before numbers.</param>
         /// <returns>Concentration of prefilled list of string and number itself.</returns>
-        public static List<string> PrefilledCustom(List<long> numberList, char text = ' ')
+        public static List<string> PreFilledCustom(List<long> numberList, char text = ' ')
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -364,7 +364,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before numbers.</param>
         /// <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
-        public static List<string> PrefilledCustom(List<long?> numberList, char text = ' ')
+        public static List<string> PreFilledCustom(List<long?> numberList, char text = ' ')
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -401,7 +401,7 @@ namespace Prefill
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled string and number itself.</returns>
-        public static string PrefilledCustom(ulong number, byte maxDigit, string text = " ")
+        public static string PreFilledCustom(ulong number, byte maxDigit, string text = " ")
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxDigit, text) + number;
@@ -414,7 +414,7 @@ namespace Prefill
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled string and number itself. If given number is null, it returns only prefilling value.</returns>
-        public static string PrefilledCustom(ulong? number, byte maxDigit, string text = " ")
+        public static string PreFilledCustom(ulong? number, byte maxDigit, string text = " ")
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxDigit, text) + number;
@@ -427,7 +427,7 @@ namespace Prefill
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled string and number itself.</returns>
-        public static string PrefilledCustom(ulong number, byte maxDigit, char text = ' ')
+        public static string PreFilledCustom(ulong number, byte maxDigit, char text = ' ')
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxDigit, text) + number;
@@ -440,7 +440,7 @@ namespace Prefill
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled string and number itself. If given number is null, it returns only prefilling value.</returns>
-        public static string PrefilledCustom(ulong? number, byte maxDigit, char text = ' ')
+        public static string PreFilledCustom(ulong? number, byte maxDigit, char text = ' ')
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxDigit, text) + number;
@@ -453,7 +453,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled list of string and number itself.</returns>
-        public static List<string> PrefilledCustom(List<ulong> numberList, string text = " ")
+        public static List<string> PreFilledCustom(List<ulong> numberList, string text = " ")
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -486,7 +486,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
-        public static List<string> PrefilledCustom(List<ulong?> numberList, string text = " ")
+        public static List<string> PreFilledCustom(List<ulong?> numberList, string text = " ")
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -519,7 +519,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled list of string and number itself.</returns>
-        public static List<string> PrefilledCustom(List<ulong> numberList, char text = ' ')
+        public static List<string> PreFilledCustom(List<ulong> numberList, char text = ' ')
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -552,7 +552,7 @@ namespace Prefill
         /// <param name="numberList">List of specified numbers.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
-        public static List<string> PrefilledCustom(List<ulong?> numberList, char text = ' ')
+        public static List<string> PreFilledCustom(List<ulong?> numberList, char text = ' ')
         {
             // Null check for Enumarable.Max() System.ArgumentNullException
             if (numberList == null || numberList.Count == 0)
@@ -589,7 +589,7 @@ namespace Prefill
         /// <param name="maxLength">Maximum length of text value with prefilling.</param>
         /// <param name="text">Specified text to be used for prefilling.</param>
         /// <returns>Concentration of prefilled string and context itself.</returns>
-        public static string PrefilledCustom(string context, int maxLength, string text = " ")
+        public static string PreFilledCustom(string context, int maxLength, string text = " ")
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return string.Concat(PreFillCustom(context, maxLength, text), context);
@@ -602,7 +602,7 @@ namespace Prefill
         /// <param name="maxLength">Maximum length of text value with prefilling.</param>
         /// <param name="text">Specified text to be used for prefilling.</param>
         /// <returns>Concentration of prefilled string and context itself.</returns>
-        public static string PrefilledCustom(string context, int maxLength, char text = ' ')
+        public static string PreFilledCustom(string context, int maxLength, char text = ' ')
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return string.Concat(PreFillCustom(context, maxLength, text), context);
@@ -615,7 +615,7 @@ namespace Prefill
         /// <param name="contextList">List of specified text.</param>
         /// <param name="text">Selected text to fill before context.</param>
         /// <returns>Concentration of prefilled list of string and context itself.</returns>
-        public static List<string> PrefilledCustom(List<string> contextList, string text = " ")
+        public static List<string> PreFilledCustom(List<string> contextList, string text = " ")
         {
             // Null check
             if (contextList == null || contextList.Count == 0)
@@ -648,7 +648,7 @@ namespace Prefill
         /// <param name="contextList">List of specified text.</param>
         /// <param name="text">Selected text to fill before context.</param>
         /// <returns>Concentration of prefilled list of string and context itself.</returns>
-        public static List<string> PrefilledCustom(List<string> contextList, char text = ' ')
+        public static List<string> PreFilledCustom(List<string> contextList, char text = ' ')
         {
             // Null check
             if (contextList == null || contextList.Count == 0)

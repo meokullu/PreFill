@@ -62,7 +62,7 @@
             <param name="text">Selected text to fill.</param>
             <returns>A string whose filled with specified string.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Int64,System.Byte,System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Int64,System.Byte,System.String)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
             </summary>
@@ -71,7 +71,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Nullable{System.Int64},System.Byte,System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Nullable{System.Int64},System.Byte,System.String)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
             If number is null, it returns only prefillling value.
@@ -81,7 +81,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled by selected text with maximum digit set.  If number is null, it returns only prefillling value.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Int64,System.Byte,System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Int64,System.Byte,System.Char)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
             </summary>
@@ -90,7 +90,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Nullable{System.Int64},System.Byte,System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Nullable{System.Int64},System.Byte,System.Char)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
             If number is null, it returns only prefillling value.
@@ -100,7 +100,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled by selected text with maximum digit set. If number is null, it returns only prefillling value.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Int64},System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.Int64},System.String)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
@@ -109,7 +109,7 @@
             <param name="text">Selected text to fill before numbers.</param>
             <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Nullable{System.Int64}},System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.Nullable{System.Int64}},System.String)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
@@ -118,7 +118,7 @@
             <param name="text">Selected text to fill before numbers.</param>
             <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Int64},System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.Int64},System.Char)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (char) and number value itself via using longest length as maximum length. 
@@ -127,7 +127,7 @@
             <param name="text">Selected text to fill before numbers.</param>
             <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Nullable{System.Int64}},System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.Nullable{System.Int64}},System.Char)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (char) and number value itself via using longest length as maximum length. 
@@ -136,7 +136,7 @@
             <param name="text">Selected text to fill before numbers.</param>
             <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.UInt64,System.Byte,System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.UInt64,System.Byte,System.String)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
             </summary>
@@ -145,7 +145,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled string and number itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Nullable{System.UInt64},System.Byte,System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Nullable{System.UInt64},System.Byte,System.String)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
             </summary>
@@ -154,7 +154,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled string and number itself. If given number is null, it returns only prefilling value.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.UInt64,System.Byte,System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.UInt64,System.Byte,System.Char)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
             </summary>
@@ -163,7 +163,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled string and number itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Nullable{System.UInt64},System.Byte,System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Nullable{System.UInt64},System.Byte,System.Char)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
             </summary>
@@ -172,7 +172,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled string and number itself. If given number is null, it returns only prefilling value.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.UInt64},System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.UInt64},System.String)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
@@ -181,7 +181,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Nullable{System.UInt64}},System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.Nullable{System.UInt64}},System.String)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
@@ -190,7 +190,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.UInt64},System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.UInt64},System.Char)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
@@ -199,7 +199,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled list of string and number itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.Nullable{System.UInt64}},System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.Nullable{System.UInt64}},System.Char)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
@@ -208,7 +208,7 @@
             <param name="text">Selected text to fill before number.</param>
             <returns>Concentration of prefilled list of string and number itself. If element is null, adds only prefilling value into list.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.String,System.Int32,System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.String,System.Int32,System.String)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with string value itself at the end.
             </summary>
@@ -217,7 +217,7 @@
             <param name="text">Specified text to be used for prefilling.</param>
             <returns>Concentration of prefilled string and context itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.String,System.Int32,System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.String,System.Int32,System.Char)">
             <summary>
             Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with string value itself at the end.
             </summary>
@@ -226,7 +226,7 @@
             <param name="text">Specified text to be used for prefilling.</param>
             <returns>Concentration of prefilled string and context itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.String},System.String)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.String},System.String)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and string value itself via using longest length as maximum length.
@@ -235,7 +235,7 @@
             <param name="text">Selected text to fill before context.</param>
             <returns>Concentration of prefilled list of string and context itself.</returns>
         </member>
-        <member name="M:Prefill.PreFill.PrefilledCustom(System.Collections.Generic.List{System.String},System.Char)">
+        <member name="M:Prefill.PreFill.PreFilledCustom(System.Collections.Generic.List{System.String},System.Char)">
             <summary>
             Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
             Creates a list of concatenated prefilling value (string) and string value itself via using longest length as maximum length.

@@ -5,9 +5,9 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.3.0</Version>
-    <AssemblyVersion>1.3.0</AssemblyVersion>
-    <FileVersion>1.3.0</FileVersion>
+    <Version>1.3.1</Version>
+    <AssemblyVersion>1.3.1</AssemblyVersion>
+    <FileVersion>1.3.1</FileVersion>
     <Copyright>meokullu</Copyright>
     <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
     <Title>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Title>
@@ -15,10 +15,7 @@
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>data-science; data; data-engineering; alignment; data-analysis; egibility</PackageTags>
-    <PackageReleaseNotes>
-      * GetLengthOfString() private method was throwing error if given string value is null.
-      * PrefilledCustom() methods are added to support null values.
-      * PrefillCustom() methods are added to support null values.
+    <PackageReleaseNotes>* Method name PrefilledCustom with changed with PreFilledCustom.
     </PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
