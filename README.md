@@ -2,7 +2,7 @@
 
 PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.
 
-![PreFill](https://repository-images.githubusercontent.com/575382775/fe896835-417e-442f-9544-a3df8a4ac154)
+![PreFill](https://repository-images.githubusercontent.com/575382775/7395a49b-a7a0-4f1b-82ac-800e51e6e6dc)
 
 [Check out on NuGet gallery](https://www.nuget.org/packages/PreFill/)
 
