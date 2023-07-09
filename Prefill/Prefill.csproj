@@ -5,9 +5,9 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.3.1</Version>
-    <AssemblyVersion>1.3.1</AssemblyVersion>
-    <FileVersion>1.3.1</FileVersion>
+    <Version>1.3.2</Version>
+    <AssemblyVersion>1.3.2</AssemblyVersion>
+    <FileVersion>1.3.2</FileVersion>
     <Copyright>meokullu</Copyright>
     <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
     <Title>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Title>
@@ -15,11 +15,14 @@
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>data-science; data; data-engineering; alignment; data-analysis; egibility</PackageTags>
-    <PackageReleaseNotes>* Method name PrefilledCustom with changed with PreFilledCustom.
+    <PackageReleaseNotes>
+      * Methods are sorted.
     </PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -31,16 +34,28 @@
     <WarningLevel>9999</WarningLevel>
   </PropertyGroup>
 
+<ItemGroup>
+    <Content Include="Resources\icon.ico" />
+  </ItemGroup>
+
   <ItemGroup>
     <Folder Include="OutputDLL\" />
   </ItemGroup>
 
-  <ItemGroup>
+ <ItemGroup>
     <None Include="..\LICENSE.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
     <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="Resources\icon.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="Resources\icon.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
