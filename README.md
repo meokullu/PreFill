@@ -187,10 +187,10 @@ Returns **prefill value only**. (string)
 
 ## Version History
 
-# 2.0.0
+* 2.0.0
    * Target framework changed from .Net Core 3.1 to .Net 7.0
 
-# 1.3.1
+* 1.3.1
    * PrefilledCustom methods' name changed with PreFilledCustom.
 
 * 1.3.0
