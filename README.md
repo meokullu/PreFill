@@ -2,7 +2,7 @@
 
 PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.
 
-![PreFill](https://repository-images.githubusercontent.com/575382775/7395a49b-a7a0-4f1b-82ac-800e51e6e6dc)
+![PreFill](https://github.com/meokullu/PreFill/blob/master/Prefill/Resources/Screenshot.png)
 
 [Check out on NuGet gallery](https://www.nuget.org/packages/PreFill/)
 
@@ -186,6 +186,9 @@ Returns **prefill value only**. (string)
 * PreFill8(5, ' ') => "       "
 
 ## Version History
+
+# 2.0.0
+   * Target framework changed from .Net Core 3.1 to .Net 7.0
 
 # 1.3.1
    * PrefilledCustom methods' name changed with PreFilledCustom.

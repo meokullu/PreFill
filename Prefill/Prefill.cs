@@ -6,7 +6,7 @@ using System.Text;
 namespace Prefill
 {
     /// <summary>
-    /// PreFill, adds desired character or text on the left of value or list of values  in order to align it/them to the right side.
+    /// PreFill, adds desired character or text on the left of value or list of values in order to align it/them to the right side.
     /// </summary>
     public static partial class PreFill
     {
@@ -669,6 +669,9 @@ namespace Prefill
         }
     }
 
+    /// <summary>
+    /// Prefill
+    /// </summary>
     public static partial class PreFill
     {
         /// <summary>
