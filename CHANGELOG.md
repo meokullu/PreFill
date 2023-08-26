@@ -8,6 +8,11 @@
 
 ### Removed
 
+## [2.0.0]
+
+### Changed
+  * Target framework is changef from .Net Core 3.1 to .Net 7.0
+
 ## [1.3.1]
 
 ### Changed
