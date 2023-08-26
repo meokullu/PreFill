@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.3.2</Version>
-    <AssemblyVersion>1.3.2</AssemblyVersion>
-    <FileVersion>1.3.2</FileVersion>
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0</AssemblyVersion>
+    <FileVersion>2.0.0</FileVersion>
     <Copyright>meokullu</Copyright>
     <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
     <Title>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Title>
@@ -15,8 +15,7 @@
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>data-science; data; data-engineering; alignment; data-analysis; egibility</PackageTags>
-    <PackageReleaseNotes>
-      * Methods are sorted.
+    <PackageReleaseNotes>Target framework is changed from .NET Core 3.1 to .NET 7.0
     </PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
