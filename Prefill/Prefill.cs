@@ -157,13 +157,13 @@ namespace Prefill
         private static string FillString(int count, string text)
         {
             // Creating an instance of StringBuilder().
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             // Loop of count.
             while (count + 1 > 0)
             {
                 // Adding text into StringBuilder instance.
-                sb.Append(text);
+                _ = sb.Append(text);
 
                 // Decreasing count on the loop.
                 count--;
@@ -182,13 +182,13 @@ namespace Prefill
         private static string FillChar(int count, char text)
         {
             // Creating an instance of StringBuilder().
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             // Loop of count.
             while (count + 1 > 0)
             {
                 // Adding text into StringBuilder instance.
-                sb.Append(text);
+                _ = sb.Append(text);
 
                 // Decreasing count on the loop.
                 count--;
@@ -244,7 +244,7 @@ namespace Prefill
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxDigit, text) + number;
         }
-        
+
         /// <summary>
         /// Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
         /// </summary>
@@ -298,7 +298,7 @@ namespace Prefill
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return PreFillCustom(number, maxNumberOfDigit, text) + number;
         }
-        
+
         /// <summary>
         /// Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
         /// </summary>
@@ -355,13 +355,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (ulong? item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -388,13 +388,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (ulong? item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -421,13 +421,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (ulong item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -436,7 +436,7 @@ namespace Prefill
             // Returning result as a list.
             return resultList;
         }
-        
+
         /// <summary>
         /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
@@ -454,13 +454,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (ulong item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -487,13 +487,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (long? item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -520,13 +520,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (long? item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -553,13 +553,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (long item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -586,13 +586,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(numberList.Count);
+            List<string> resultList = new(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
 
             // Loop for list.
-            foreach (var item in numberList)
+            foreach (long item in numberList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -619,13 +619,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(contextList.Count);
+            List<string> resultList = new(contextList.Count);
 
             // Maximum length of string on list.
             int maxFillCount = GetLengthOfString(contextList.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur));
 
             // Loop for list.
-            foreach (var item in contextList)
+            foreach (string item in contextList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -652,13 +652,13 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new List<string>(contextList.Count);
+            List<string> resultList = new(contextList.Count);
 
             // Maximum length of string on list.
             int maxFillCount = GetLengthOfString(contextList.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur));
 
             // Loop for list.
-            foreach (var item in contextList)
+            foreach (string item in contextList)
             {
                 // Adding prefilling string concatting item of the list itself.
                 resultList.Add(string.Concat(PreFillCustom(item, maxFillCount, text), item));
@@ -801,7 +801,7 @@ namespace Prefill
             // Calling FillChar method to get prefilling value.
             return FillChar(fillCount, text);
         }
-        
+
         /// <summary>
         /// Calculates length of given text then creates string with prefilling value of specified character before given numtextber on limit of maximum length.
         /// </summary>

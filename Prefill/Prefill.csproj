@@ -5,11 +5,13 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
-    <AssemblyVersion>2.0.0</AssemblyVersion>
-    <FileVersion>2.0.0</FileVersion>
+    <Version>2.0.1</Version>
+    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <FileVersion>2.0.1</FileVersion>
     <Copyright>meokullu</Copyright>
-    <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
+    <Description>v2.0.1
+Explicit variable types added instead of var.
+</Description>
     <Title>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Title>
     <PackageProjectUrl>https://meokullu.github.io/PreFill/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
