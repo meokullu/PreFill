@@ -187,6 +187,9 @@ Returns **prefill value only**. (string)
 
 ## Version History
 
+* 2.0.1
+   * Explipicit variables are used instead of var.
+
 * 2.0.0
    * Target framework changed from .Net Core 3.1 to .Net 7.0
 
@@ -215,7 +218,7 @@ Returns **prefill value only**. (string)
 - [ ] If length of desired text is more than one character repeatence of adding it may make result not aligned.
 
 ## Licence
-No licence is required.
+[MIT license](https://github.com/meokullu/Prefill/blob/master/LICENSE)
 
 ## Authors
 Twitter: [@enesokullu](https://twitter.com/EnesOkullu)
