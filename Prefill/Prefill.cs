@@ -157,7 +157,7 @@ namespace Prefill
         private static string FillString(int count, string text)
         {
             // Creating an instance of StringBuilder().
-            StringBuilder sb = new();
+            StringBuilder sb = new StringBuilder();
 
             // Loop of count.
             while (count + 1 > 0)
@@ -182,7 +182,7 @@ namespace Prefill
         private static string FillChar(int count, char text)
         {
             // Creating an instance of StringBuilder().
-            StringBuilder sb = new();
+            StringBuilder sb = new StringBuilder();
 
             // Loop of count.
             while (count + 1 > 0)
@@ -355,7 +355,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -388,7 +388,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -421,7 +421,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -454,7 +454,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -487,7 +487,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -520,7 +520,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -553,7 +553,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -586,7 +586,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(numberList.Count);
+            List<string> resultList = new List<string>(numberList.Count);
 
             // Getting biggest number's digit number of biggest value of the given number.
             int maxFillCount = GetNumberOfDigit(numberList.Max());
@@ -619,7 +619,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(contextList.Count);
+            List<string> resultList = new List<string>(contextList.Count);
 
             // Maximum length of string on list.
             int maxFillCount = GetLengthOfString(contextList.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur));
@@ -652,7 +652,7 @@ namespace Prefill
             }
 
             // Creating a list.
-            List<string> resultList = new(contextList.Count);
+            List<string> resultList = new List<string>(contextList.Count);
 
             // Maximum length of string on list.
             int maxFillCount = GetLengthOfString(contextList.Aggregate("", (max, cur) => max.Length > cur.Length ? max : cur));
