@@ -1,29 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0</TargetFrameworks>
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.0.1</Version>
-    <AssemblyVersion>2.0.1</AssemblyVersion>
+    <Version>2.1.0</Version>
+    <AssemblyVersion>2.1.0</AssemblyVersion>
     <FileVersion>2.0.1</FileVersion>
-    <Copyright>meokullu</Copyright>
-    <Description>v2.0.1
-Explicit variable types added instead of var.
-</Description>
+    <Copyright>Enes Okullu</Copyright>
+    <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
     <Title>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Title>
     <PackageProjectUrl>https://meokullu.github.io/PreFill/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>data-science; data; data-engineering; alignment; data-analysis; egibility</PackageTags>
-    <PackageReleaseNotes>Target framework is changed from .NET Core 3.1 to .NET 7.0
-    </PackageReleaseNotes>
+    <PackageReleaseNotes>v.2.1.0
+Multi-target frameworks (net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0) support is added.
+OutputDLL folder is removed.
+</PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <PackageIcon>icon.png</PackageIcon>
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <Authors>Enes Okullu</Authors>
+    <Company>Enes Okullu</Company>
+    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -37,10 +40,6 @@ Explicit variable types added instead of var.
 
 <ItemGroup>
     <Content Include="Resources\icon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="OutputDLL\" />
   </ItemGroup>
 
  <ItemGroup>
