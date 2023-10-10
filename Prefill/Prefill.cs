@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Prefill
+namespace PreFill
 {
     /// <summary>
     /// PreFill, adds desired character or text on the left of value or list of values in order to align it/them to the right side.
