@@ -1,4 +1,4 @@
-# PreFill
+## PreFill
 
 PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.
 
@@ -6,7 +6,7 @@ PreFill is a project to align horizontally listed output values to right side in
 
 [Check out on NuGet gallery](https://www.nuget.org/packages/PreFill/)
 
-## Description
+### Description
 
 PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (sbyte, byte, int, uint, long, ulong, string)
 
@@ -34,7 +34,7 @@ See [Changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
   
 ### Task list
 
-### Knowns bugs
+#### Knowns bugs
 - [ ] If length of desired text is more than one character repeatence of adding it may make result not aligned.
 
 ### Licence
