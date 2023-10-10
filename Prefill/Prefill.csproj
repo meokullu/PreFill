@@ -25,7 +25,8 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
     <Authors>Enes Okullu</Authors>
     <Company>Enes Okullu</Company>
-    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
+    <IsPublishable>False</IsPublishable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
