@@ -4,7 +4,7 @@ PreFill is a project to align horizontally listed output values to right side in
 
 ![PreFill](https://github.com/meokullu/PreFill/blob/master/Prefill/Resources/Screenshot.png)
 
-[Check out on NuGet gallery](https://www.nuget.org/packages/PreFill/)
+[Download on NuGet gallery](https://www.nuget.org/packages/PreFill/)
 
 ### Description
 
