@@ -10,6 +10,9 @@
 ### Removed
 -->
 
+## [2.x.y] (Upcoming)
+*
+
 ## [2.0.0]
 
 ### Changed

@@ -31,11 +31,9 @@ To check listed methods, example of output visit wiki page. [PreFill Wiki](https
 
 ### Version History
 See [Changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
-  
-### Task list
 
-#### Knowns bugs
-- [ ] If length of desired text is more than one character repeatence of adding it may make result not aligned.
+### Task list
+* Create an issue or check task list: [Issues](https://github.com/meokullu/PreFill/issues)
 
 ### Licence
 [MIT license](https://github.com/meokullu/Prefill/blob/master/LICENSE)
