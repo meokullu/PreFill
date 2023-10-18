@@ -1,5 +1,6 @@
-# Changelog
+## PreFill Changelog
 
+<!--
 ## [Unreleased]
 
 ### Added
@@ -7,6 +8,18 @@
 ### Changed
 
 ### Removed
+-->
+
+## [2.1.2]
+*
+
+## [2.1.1]
+*
+
+
+## [2.1.0]
+
+### Changed
 
 ## [2.0.0]
 
@@ -16,19 +29,19 @@
 ## [1.3.1]
 
 ### Changed
-  * PrefilledCustom methods' name changed with PreFilledCustom().
+  * `PrefilledCustom` methods' name changed with `PreFilledCustom()`.
 
 ## [1.3.0]
 
 ### Added
-  * Prefill, PrefillCustom methods support null values.
+  * `Prefill`, `PrefillCustom` methods support `null` values.
 ### Changed
-  * GetLengthOFString private method was raising an error if provided string context was null. Null checking is added.
+  * `GetLengthOfString()` private method was raising an error if provided `string` context was null. `Null` checking is added.
 
 ## [1.1.0]
 
 ### Added
-+ Added GetLengthOfString() method
-- Added support string data type.
++ Added `GetLengthOfString()` method
+- Added support `string` data type.
 
 ## [1.0.0]
