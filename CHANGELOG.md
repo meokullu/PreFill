@@ -10,16 +10,31 @@
 ### Removed
 -->
 
-## [2.1.2]
-*
-
 ## [2.1.1]
-*
 
+### Added
+* Added missing version informations on CHANGELOG.
+* Wiki link added under Example Usage on README.
+* CHANGELOG link added under Version History on README.
+
+### Changed
+* Social media preview link fixed. 
+* Folder name changed from Prefill to PreFill.
+* README has better view.
+* CHANGELOG has better view.
+* LICENCE.md file renamed as LICENCE.
 
 ## [2.1.0]
 
+### Added
+* Multi-framework support is added. (net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0)
+
 ### Changed
+
+## [2.0.1]
+
+### Changed
+* Using explicipt variable instead of `var`
 
 ## [2.0.0]
 
