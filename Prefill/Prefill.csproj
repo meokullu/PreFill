@@ -5,9 +5,9 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.1.1</Version>
-    <AssemblyVersion>2.1.1</AssemblyVersion>
-    <FileVersion>2.1.1</FileVersion>
+    <Version>2.1.2</Version>
+    <AssemblyVersion>2.1.2</AssemblyVersion>
+    <FileVersion>2.1.2</FileVersion>
     <Copyright>Enes Okullu</Copyright>
     <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
     <Title>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Title>
@@ -15,17 +15,20 @@
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>data-science; data; data-engineering; alignment; data-analysis; egibility</PackageTags>
-    <PackageReleaseNotes>v.2.1.1
-     Folder path renamed from Prefill to PreFill.
-</PackageReleaseNotes>
+    <PackageReleaseNotes>
+      v.2.1.2      
+      License.md renamed as License.
+      See changelog: (https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
+    </PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>icon.png</PackageIcon>
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
     <Authors>Enes Okullu</Authors>
     <Company>Enes Okullu</Company>
-    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
+    <IsPublishable>False</IsPublishable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -42,7 +45,7 @@
   </ItemGroup>
 
  <ItemGroup>
-    <None Include="..\LICENSE.md">
+    <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
