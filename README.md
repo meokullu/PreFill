@@ -1,4 +1,5 @@
 ## PreFill
+[![PreFill](https://img.shields.io/nuget/v/PreFill.svg)](https://www.nuget.org/packages/PreFill/) [![PreFill](https://img.shields.io/nuget/dt/PreFill.svg)](https://www.nuget.org/packages/PreFill/) [![License](https://img.shields.io/github/license/meokullu/PreFill.svg)](https://github.com/meokullu/PreFill/blob/master/LICENSE)
 
 PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.
 
@@ -36,10 +37,16 @@ See [Changelog](https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
 * Create an issue or check task list: [Issues](https://github.com/meokullu/PreFill/issues)
 
 ### Licence
-[MIT license](https://github.com/meokullu/Prefill/blob/master/LICENSE)
+This repository is licensed under the "MIT" license. See [MIT license](https://github.com/meokullu/CalculateETA/blob/master/LICENSE).
 
-### Authors
-Twitter: [@enesokullu](https://twitter.com/EnesOkullu)
+### Licence
+[MIT license](https://github.com/meokullu/PreFill/blob/master/LICENSE)
+
+### Authors & Contributing
+
+If you'd like to contribute, then contribute. <!-- [contributing guide](CONTRIBUTING.md). -->
+
+[![Contributors](https://contrib.rocks/image?repo=meokullu/PreFill)](https://github.com/meokullu/PreFill/graphs/contributors)
 
 ### Help
 Twitter: [@enesokullu](https://twitter.com/EnesOkullu)
