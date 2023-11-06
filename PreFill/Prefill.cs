@@ -13,7 +13,7 @@ namespace PreFill
         #region GetNumberOfDigits
 
         /// <summary>
-        /// Calculates number of digit of a specified unsigned long number via using Math.Log10 method. If number is null returns zero. (Unsigned byte, ushort, uint, ulong)
+        /// Calculates number of digit of a specified unsigned long number via using <see cref="Math.Log10(double)"/> method. If number is null returns zero. (Unsigned byte, ushort, uint, ulong)
         /// </summary>
         /// <param name="number">A number whose number of digit to be found.</param>
         /// <returns>Digit number of speficied unsinged long number. If number is null returns 0.</returns>
@@ -40,7 +40,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calculates number of digit of a specified unsigned long number via using Math.Log10 methot. (Unsigned byte, ushort, uint, ulong)
+        /// Calculates number of digit of a specified unsigned long number via using <see cref="Math.Log10(double)"/> methot. (Unsigned byte, ushort, uint, ulong)
         /// </summary>
         /// <param name="number">A number whose number of digit to be found.</param>
         /// <returns>Digit number of speficied unsinged long number.</returns>
@@ -61,7 +61,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calculates number of digit of a specified long number via using Math.Log10 method.
+        /// Calculates number of digit of a specified long number via using <see cref="Math.Log10(double)"/> method.
         /// If number is null returns 0. If number is negative it adds one more digit for minus sign. (Signed sbyte, short, int, long)
         /// </summary>
         /// <param name="number">A number whose number of digit to be found.</param>
@@ -96,7 +96,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calculates number of digit of a specified long number via using Math.Log10 methot. If number is negative it adds one more digit for minus sign. (Signed sbyte, short, int, long)
+        /// Calculates number of digit of a specified long number via using <see cref="Math.Log10(double)"/> methot. If number is negative it adds one more digit for minus sign. (Signed sbyte, short, int, long)
         /// </summary>
         /// <param name="number">A number whose number of digit to be found.</param>
         /// <returns>Digit number of speficied long number. If number is negative returns one additional digit for minus sign. If number is zero returns 1.</returns>
@@ -127,7 +127,7 @@ namespace PreFill
         #region GetLengthOfText
 
         /// <summary>
-        /// Calculates length of a specified text via using string.Length. (String)
+        /// Calculates length of a specified text via using <see cref="string.Length"/>. (String)
         /// </summary>
         /// <param name="text">A text whose length to be found.</param>
         /// <returns>The number of characters of specified text. If text is null, it returns zero.</returns>
@@ -207,7 +207,7 @@ namespace PreFill
     public static partial class PreFill
     {
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(ulong?, int, string)"/> method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">A specified number whose prefilling value to be found.</param>
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
@@ -220,7 +220,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(ulong?, int, char)"/> method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">Number of filling.</param>
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
@@ -233,7 +233,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(ulong, int, string)"/> method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">A specified number whose prefilling value to be found.</param>
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
@@ -246,7 +246,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(ulong?, int, char)"/> method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">Number of filling.</param>
         /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
@@ -259,7 +259,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(long?, int, string)"/> method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
         /// If number is null, it returns only prefillling value.
         /// </summary>
         /// <param name="number">Number of filling. If number is null, it returns prefilling value depends on maxNumberOfDigit.</param>
@@ -273,7 +273,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(long?, int, char)"/> method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
         /// If number is null, it returns only prefillling value.
         /// </summary>
         /// <param name="number">Number of filling. If number is null, it returns prefilling value depends on maxNumberOfDigit.</param>
@@ -287,7 +287,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(long, int, string)"/> method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">Number of filling.</param>
         /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
@@ -300,7 +300,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
+        /// Calls <see cref="PreFillCustom(long, int, char)"/> method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">Number of filling.</param>
         /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
@@ -313,7 +313,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (string) and concatenates it with string value itself at the end.
+        /// Calls <see cref="PreFillCustom(string, int, string)"/> method to create prefilling value with specified values (string) and concatenates it with string value itself at the end.
         /// </summary>
         /// <param name="context">A text whose prefill value to be found.</param>
         /// <param name="maxLength">Maximum length of text value with prefilling.</param>
@@ -326,7 +326,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Calls PreFillCustom() method to create prefilling value with specified values (char) and concatenates it with string value itself at the end.
+        /// Calls <see cref="PreFillCustom(string, int, char)"/> method to create prefilling value with specified values (char) and concatenates it with string value itself at the end.
         /// </summary>
         /// <param name="context">A text whose prefill value to be found.</param>
         /// <param name="maxLength">Maximum length of text value with prefilling.</param>
@@ -339,7 +339,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{ulong?}, string)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -372,7 +372,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{ulong?}, char)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -405,7 +405,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{ulong}, string)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -438,7 +438,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{ulong}, char)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -471,7 +471,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{long?}, string)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -504,7 +504,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{long?}, char)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (char) and number value itself via using longest length as maximum length. 
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -537,7 +537,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{long}, string)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and number value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -570,7 +570,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{long}, char)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (char) and number value itself via using longest length as maximum length. 
         /// </summary>
         /// <param name="numberList">List of specified numbers.</param>
@@ -603,7 +603,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{string}, string)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and string value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="contextList">List of specified text.</param>
@@ -636,7 +636,7 @@ namespace PreFill
         }
 
         /// <summary>
-        /// Checks if provided list is null or empty if not finds longest length and calls PreFillCustom() method to create prefilling value for each element.
+        /// Checks if provided list is null or empty if not finds longest length and calls <see cref="PreFilledCustom(List{string}, char)"/> method to create prefilling value for each element.
         /// Creates a list of concatenated prefilling value (string) and string value itself via using longest length as maximum length.
         /// </summary>
         /// <param name="contextList">List of specified text.</param>
