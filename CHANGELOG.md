@@ -11,6 +11,13 @@
 #### Removed
 -->
 
+### [2.1.2]
+
+#### Changed
+* New design README.
+* New design CHANGELOG.
+* Added method references to summaries.
+
 ### [2.1.1]
 
 #### Added
@@ -57,8 +64,8 @@
 ### [1.1.0]
 
 #### Added
-+ Added `GetLengthOfString()` method
-- Added support `string` data type.
+* Added `GetLengthOfString()` method
+* Added support `string` data type.
 
 ### [1.0.0]
 Initial version.
