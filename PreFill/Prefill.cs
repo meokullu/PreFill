@@ -147,7 +147,7 @@ namespace PreFill
         #endregion GetLengthOfText
 
         #region FillChar/FillString
-
+          
         /// <summary>
         /// Creates a string value for prefilling value via repeating text with specified count times.
         /// </summary>
