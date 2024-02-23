@@ -5,21 +5,21 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.1.2</Version>
-    <AssemblyVersion>2.1.2</AssemblyVersion>
-    <FileVersion>2.1.2</FileVersion>
+    <Version>2.2.0</Version>
+    <AssemblyVersion>2.2.0</AssemblyVersion>
+    <FileVersion>2.2.0</FileVersion>
     <Copyright>Enes Okullu</Copyright>
     <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
-    <Title>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Title>
+    <Title>PreFill</Title>
     <PackageProjectUrl>https://meokullu.github.io/PreFill/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/meokullu/PreFill</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>data-science; data; data-engineering; alignment; data-analysis; egibility</PackageTags>
     <PackageReleaseNotes>
-      v.2.1.2
-      * New design README.
-      * New design CHANGELOG.
-      * Added method references to summaries.
+      v.2.2.0
+      * maxNumberOfDigit renamed as maxDigit on eight methods.
+      * PreFillCustom&lt;T&gt;() and PreFilledCustom&lt;T&gt;() methods are added for generic types.
+      
       See changelog (https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
     </PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>

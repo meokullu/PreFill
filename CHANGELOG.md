@@ -11,6 +11,14 @@
 #### Removed
 -->
 
+### [2.2.0]
+
+#### Added
+* `PreFillCustom<T>()` and `PreFilledCustom<T>()` methods are added.
+
+#### Changed
+* `maxNumberOfDigit` renamed as `maxDigit` on `PreFilledCustom(long?... string)`, `PreFilledCustom(long?... char)`, `PreFilledCustom(long... string)`, `PreFilledCustom(long... char)`, `PreFillCustom(long?... string)`, `PreFillCustom(long?... char)`, `PreFillCustom(long... string)` and `PreFillCustom(long... char)`
+
 ### [2.1.2]
 
 #### Changed
