@@ -9,7 +9,7 @@ PreFill is a project to align horizontally listed output values to right side in
 
 ### Description
 
-PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (`sbyte`, `byte`, `int`, `uint`, `long`, `ulong`, `string`)
+PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (`sbyte`, `byte`, `int`, `uint`, `long`, `ulong`, `string`, `object`)
 
 PreFill is optimized for CPU-intense applications.
 

@@ -263,13 +263,13 @@ namespace PreFill
         /// If number is null, it returns only prefillling value.
         /// </summary>
         /// <param name="number">Number of filling. If number is null, it returns prefilling value depends on maxNumberOfDigit.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set.  If number is null, it returns only prefillling value.</returns>
-        public static string PreFilledCustom(long? number, byte maxNumberOfDigit, string text = " ")
+        public static string PreFilledCustom(long? number, byte maxDigit, string text = " ")
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
-            return PreFillCustom(number, maxNumberOfDigit, text) + number;
+            return PreFillCustom(number, maxDigit, text) + number;
         }
 
         /// <summary>
@@ -277,39 +277,39 @@ namespace PreFill
         /// If number is null, it returns only prefillling value.
         /// </summary>
         /// <param name="number">Number of filling. If number is null, it returns prefilling value depends on maxNumberOfDigit.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set. If number is null, it returns only prefillling value.</returns>
-        public static string PreFilledCustom(long? number, byte maxNumberOfDigit, char text = ' ')
+        public static string PreFilledCustom(long? number, byte maxDigit, char text = ' ')
         {
             // Calling PreFillCustom to get prefilling string and concatting it with number.
-            return PreFillCustom(number, maxNumberOfDigit, text) + number;
+            return PreFillCustom(number, maxDigit, text) + number;
         }
 
         /// <summary>
         /// Calls <see cref="PreFillCustom(long, int, string)"/> method to create prefilling value with specified values (string) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">Number of filling.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
-        public static string PreFilledCustom(long number, byte maxNumberOfDigit, string text = " ")
+        public static string PreFilledCustom(long number, byte maxDigit, string text = " ")
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
-            return PreFillCustom(number, maxNumberOfDigit, text) + number;
+            return PreFillCustom(number, maxDigit, text) + number;
         }
 
         /// <summary>
         /// Calls <see cref="PreFillCustom(long, int, char)"/> method to create prefilling value with specified values (char) and concatenates it with number value itself at the end.
         /// </summary>
         /// <param name="number">Number of filling.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Selected text to fill before number.</param>
         /// <returns>Concentration of prefilled by selected text with maximum digit set.</returns>
-        public static string PreFilledCustom(long number, byte maxNumberOfDigit, char text = ' ')
+        public static string PreFilledCustom(long number, byte maxDigit, char text = ' ')
         {
             // Calling PreFillCustom to get prefilling string and concatting it with number.
-            return PreFillCustom(number, maxNumberOfDigit, text) + number;
+            return PreFillCustom(number, maxDigit, text) + number;
         }
 
         /// <summary>
@@ -336,6 +336,20 @@ namespace PreFill
         {
             // Calling PreFillCustom method to get prefilling string and concatting it with number.
             return string.Concat(PreFillCustom(context, maxLength, text), context);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value"></param>
+        /// <param name="maxLength"></param>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string PreFilledCustom<T>(T value, int maxLength, string text = " ")
+        {
+            // Calling PreFillCustom method to get prefilling string and concatting it with number.
+            return string.Concat(PreFillCustom(value, maxLength, text), value);
         }
 
         /// <summary>
@@ -742,13 +756,13 @@ namespace PreFill
         /// Calculates number of digit of given number then creates string for prefilling value of specified text before given number on limit of maximum number of digit.
         /// </summary>
         /// <param name="number">A number whose prefill value to be found.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Specified text whose will be used for prefilling.</param>
         /// <returns>Returns prefill value for a specified number. If number is null, it returns prefilling value depends on maxNumberOfDigit.</returns>
-        public static string PreFillCustom(long? number, int maxNumberOfDigit, string text = " ")
+        public static string PreFillCustom(long? number, int maxDigit, string text = " ")
         {
             // Getting number of digit of given number.
-            int fillCount = maxNumberOfDigit - GetNumberOfDigit(number);
+            int fillCount = maxDigit - GetNumberOfDigit(number);
 
             // Calling FillString method to get prefilling value.
             return FillString(fillCount, text);
@@ -758,13 +772,13 @@ namespace PreFill
         /// Calculates number of digit of given number then creates string with prefilling value of specified character before given number on limit of maximum number of digit.
         /// </summary>
         /// <param name="number">A number whose prefill value to be found.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Specified character whose will be used for prefilling.</param>
         /// <returns>Returns prefill value for a specified number. If number is null, it returns prefilling value depends on maxNumberOfDigit.</returns>
-        public static string PreFillCustom(long? number, int maxNumberOfDigit, char text = ' ')
+        public static string PreFillCustom(long? number, int maxDigit, char text = ' ')
         {
             // Getting number of digit of given number.
-            int fillCount = maxNumberOfDigit - GetNumberOfDigit(number);
+            int fillCount = maxDigit - GetNumberOfDigit(number);
 
             // Calling FillChar method to get prefilling value.
             return FillChar(fillCount, text);
@@ -774,13 +788,13 @@ namespace PreFill
         /// Calculates number of digit of given number then creates string for prefilling value of specified text before given number on limit of maximum number of digit.
         /// </summary>
         /// <param name="number">A number whose prefill value to be found.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Specified text whose will be used for prefilling.</param>
         /// <returns>Returns prefill value for a specified number.</returns>
-        public static string PreFillCustom(long number, int maxNumberOfDigit, string text = " ")
+        public static string PreFillCustom(long number, int maxDigit, string text = " ")
         {
             // Getting number of digit of given number.
-            int fillCount = maxNumberOfDigit - GetNumberOfDigit(number);
+            int fillCount = maxDigit - GetNumberOfDigit(number);
 
             // Calling FillString method to get prefilling value.
             return FillString(fillCount, text);
@@ -790,13 +804,13 @@ namespace PreFill
         /// Calculates number of digit of given number then creates string with prefilling value of specified character before given number on limit of maximum number of digit.
         /// </summary>
         /// <param name="number">A number whose prefill value to be found.</param>
-        /// <param name="maxNumberOfDigit">Maximum number of digit including specified number and prefilling.</param>
+        /// <param name="maxDigit">Maximum number of digit including specified number and prefilling.</param>
         /// <param name="text">Specified character whose will be used for prefilling.</param>
         /// <returns>Returns prefill value for a specified number.</returns>
-        public static string PreFillCustom(long number, int maxNumberOfDigit, char text = ' ')
+        public static string PreFillCustom(long number, int maxDigit, char text = ' ')
         {
             // Getting number of digit of given number.
-            int fillCount = maxNumberOfDigit - GetNumberOfDigit(number);
+            int fillCount = maxDigit - GetNumberOfDigit(number);
 
             // Calling FillChar method to get prefilling value.
             return FillChar(fillCount, text);
@@ -832,6 +846,23 @@ namespace PreFill
 
             // Calling FillChar method to get prefilling value.
             return FillChar(textLength, charValue);
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value"></param>
+        /// <param name="maxLength"></param>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string PreFillCustom<T>(T value, int maxLength, string text = " ")
+        {
+            // Getting length of given text.
+            int textLength = maxLength - GetLengthOfString(value.ToString());
+
+            // Calling FillChar method to get prefilling value.
+            return FillString(textLength, text);
         }
 
         /// <summary>
