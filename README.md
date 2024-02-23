@@ -1,6 +1,14 @@
 ## PreFill
 > ⚠️ When updating to v2.2.0 from v2.1.2, due to renaming Prefill as PreFill an unexcepted error may occur. You can uninstall and install PreFill to avoid that. ⚠️
 
+## Uninstall & install through Package Manager Control
+```
+Uninstall-Package Prefill
+```
+
+```
+Install-Package PreFill -Version 2.2.0
+```
 
 [![PreFill](https://img.shields.io/nuget/v/PreFill.svg)](https://www.nuget.org/packages/PreFill/) [![PreFill](https://img.shields.io/nuget/dt/PreFill.svg)](https://www.nuget.org/packages/PreFill/) [![License](https://img.shields.io/github/license/meokullu/PreFill.svg)](https://github.com/meokullu/PreFill/blob/master/LICENSE)
 
