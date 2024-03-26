@@ -46,24 +46,24 @@
 * Multi-framework support is added. (net6.0; net7.0; net461; netcoreapp3.1; netstandard2.0)
 
 #### Changed
-### [2.0.1]
 
+### [2.0.1]
 #### Changed
 * Using explicipt variable instead of `var`
 
 ### [2.0.0]
 #### Changed
-  * Target framework is changef from .Net Core 3.1 to .Net 7.0
+* Target framework is changef from .Net Core 3.1 to .Net 7.0
 
 ### [1.3.1]
 #### Changed
-  * `PrefilledCustom` methods' name changed with `PreFilledCustom()`.
+* `PrefilledCustom` methods' name changed with `PreFilledCustom()`.
 
 ### [1.3.0]
 #### Added
-  * `Prefill`, `PrefillCustom` methods support `null` values.
+* `Prefill`, `PrefillCustom` methods support `null` values.
 #### Changed
-  * `GetLengthOfString()` private method was raising an error if provided `string` context was null. `Null` checking is added.
+* `GetLengthOfString()` private method was raising an error if provided `string` context was null. `Null` checking is added.
 
 ### [1.1.0]
 #### Added
