@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PreFill
 {
     /// <summary>
-    /// Prefilled
+    /// Returns PreFilled values with calling PreFill() and adding value after.
     /// </summary>
     public static partial class PreFill
     {
@@ -144,12 +141,12 @@ namespace PreFill
         }
 
         /// <summary>
-        /// 
+        /// Create prefilling values and add given value after prefilling value then returns it.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="value"></param>
-        /// <param name="maxLength"></param>
-        /// <param name="text"></param>
+        /// <typeparam name="T">Generic type.</typeparam>
+        /// <param name="value">Generic type of data whose prefill value to be found.</param>
+        /// <param name="maxLength">Maximum length of text value with prefilling.</param>
+        /// <param name="text">Specified text to be used for prefilling.</param>
         /// <returns></returns>
         public static string PreFilledCustom<T>(T value, int maxLength, string text = " ")
         {

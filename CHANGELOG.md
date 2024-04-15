@@ -11,6 +11,11 @@
 #### Removed
 -->
 
+### [2.2.2]
+#### Changed
+* Removed unused usings.
+* Missing summaries of methods are added.
+
 ### [2.2.1]
 #### Changed
 * Files splitting.

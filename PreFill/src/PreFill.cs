@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PreFill
+﻿namespace PreFill
 {
     /// <summary>
     /// PreFill
@@ -172,13 +166,13 @@ namespace PreFill
         }
 
         /// <summary>
-        /// TODO: Add summary.
+        /// Calculates length of given generic type of data then creates string with prefilling value of specified character before given data on limit of maximum length.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="value"></param>
-        /// <param name="maxLength"></param>
-        /// <param name="text"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">Generic type.</typeparam>
+        /// <param name="value">Generic type of data.</param>
+        /// <param name="maxLength">Maximum length of context including specified generic type of data as string and prefilling.</param>
+        /// <param name="text">Specified text whose will be used for prefilling.</param>
+        /// <returns>Returns prefill value for generic type of data as string.</returns>
         public static string PreFillCustom<T>(T value, int maxLength, string text = " ")
         {
             // Getting length of given text.
