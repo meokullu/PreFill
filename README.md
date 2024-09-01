@@ -1,14 +1,4 @@
 ## PreFill
-> ⚠️ When updating to v2.2.0 from v2.1.2, due to renaming Prefill as PreFill an unexcepted error may occur. You can uninstall and install PreFill to avoid that. ⚠️
-
-## Uninstall & install through Package Manager Control
-```
-Uninstall-Package Prefill
-```
-
-```
-Install-Package PreFill -Version 2.2.0
-```
 
 [![PreFill](https://img.shields.io/nuget/v/PreFill.svg)](https://www.nuget.org/packages/PreFill/) [![PreFill](https://img.shields.io/nuget/dt/PreFill.svg)](https://www.nuget.org/packages/PreFill/) [![License](https://img.shields.io/github/license/meokullu/PreFill.svg)](https://github.com/meokullu/PreFill/blob/master/LICENSE)
 
@@ -16,11 +6,18 @@ PreFill is a project to align horizontally listed output values to right side in
 
 ![PreFill](https://github.com/meokullu/PreFill/assets/4971757/3e7c14a2-c823-4d4d-825f-74fbd74f3e18)
 
+### Description
+PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (`sbyte`, `byte`, `int`, `uint`, `long`, `ulong`, `string`, `object`)
+
+### How to download
+Release: [Latest release](https://github.com/meokullu/PreFill/releases/latest)
+
 [Download on NuGet gallery](https://www.nuget.org/packages/PreFill/)
 
-### Description
-
-PreFill has methods to fill desired value preceeding of values to align them. Empty character, letter or number can be used to make different lenghted values align right. Supported data types: (`sbyte`, `byte`, `int`, `uint`, `long`, `ulong`, `string`, `object`)
+.NET CLI:
+```
+dotnet add package PreFill
+```
 
 PreFill is optimized for CPU-intense applications.
 
