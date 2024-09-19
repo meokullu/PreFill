@@ -11,6 +11,11 @@
 #### Removed
 -->
 
+### [2.3.0]
+#### Changed
+* Parameter names on `PreFillCustom(string text, int maxLength, string stringValue = " ")` changed into `PreFillCustom(string context, int maxLength, string text = " ")` [#41](https://github.com/meokullu/PreFill/issues/40)
+* Parameter names on `PreFillCustom(string text, int maxLength, char charValue = ' ')` changed into `PreFillCustom(string context, int maxLength, char text = ' ')` [#41](https://github.com/meokullu/PreFill/issues/40)
+
 ### [2.2.2]
 #### Changed
 * Removed unused usings.

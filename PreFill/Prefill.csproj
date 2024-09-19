@@ -5,9 +5,9 @@
     <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.2.3</Version>
-    <AssemblyVersion>2.2.3</AssemblyVersion>
-    <FileVersion>2.2.3</FileVersion>
+    <Version>2.3.0</Version>
+    <AssemblyVersion>2.3.0</AssemblyVersion>
+    <FileVersion>2.3.0</FileVersion>
     <Copyright>Enes Okullu</Copyright>
     <Description>PreFill is a project to align horizontally listed output values to right side in order to increase their legibility.</Description>
     <Title>PreFill</Title>
@@ -16,10 +16,10 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>data-science; data; data-engineering; alignment; data-analysis; egibility</PackageTags>
     <PackageReleaseNotes>
-      v.2.2.3
-      *
-      See changelog (https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
-    </PackageReleaseNotes>
+		v2.3.0
+		* Parameter names changed on `PreFillCustom(string text, int maxLength, string stringValue = " ")` and `PreFillCustom(string text, int maxLength, char charValue = ' ')`. First parameter named as context and third value names and text. [#41](https://github.com/meokullu/PreFill/issues/40)
+		See changelog (https://github.com/meokullu/PreFill/blob/master/CHANGELOG.md)
+	</PackageReleaseNotes>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
