@@ -136,33 +136,33 @@
         /// <summary>
         /// Calculates length of given text then creates string with prefilling value of specified character before given numtextber on limit of maximum length.
         /// </summary>
-        /// <param name="text">A text whose prefill value to be found.</param>
+        /// <param name="context">A text whose prefill value to be found.</param>
         /// <param name="maxLength">Maximum length of context including specified number and prefilling.</param>
-        /// <param name="stringValue">Specified text whose will be used for prefilling.</param>
+        /// <param name="text">Specified text whose will be used for prefilling.</param>
         /// <returns>Returns prefill value for specified text.</returns>
-        public static string PreFillCustom(string text, int maxLength, string stringValue = " ")
+        public static string PreFillCustom(string context, int maxLength, string text = " ")
         {
             // Getting length of given text.
-            int textLength = maxLength - GetLengthOfString(text);
+            int textLength = maxLength - GetLengthOfString(context);
 
             // Calling FillString method to get prefilling value.
-            return FillString(textLength, stringValue);
+            return FillString(textLength, text);
         }
 
         /// <summary>
         /// Calculates length of given text then creates string with prefilling value of specified character before given numtextber on limit of maximum length.
         /// </summary>
-        /// <param name="text">A text whose prefill value to be found.</param>
+        /// <param name="context">A text whose prefill value to be found.</param>
         /// <param name="maxLength">Maximum length of context including specified number and prefilling.</param>
-        /// <param name="charValue">Specified character whose will be used for prefilling.</param>
+        /// <param name="text">Specified character whose will be used for prefilling.</param>
         /// <returns>Returns prefill value for specified text.</returns>
-        public static string PreFillCustom(string text, int maxLength, char charValue = ' ')
+        public static string PreFillCustom(string context, int maxLength, char text = ' ')
         {
             // Getting length of given text.
-            int textLength = maxLength - GetLengthOfString(text);
+            int textLength = maxLength - GetLengthOfString(context);
 
             // Calling FillChar method to get prefilling value.
-            return FillChar(textLength, charValue);
+            return FillChar(textLength, text);
         }
 
         /// <summary>
